@@ -1,0 +1,1189 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files\FME\fme.exe" C:\Users\zool1301\Documents\DHS\Processing_Code\HouseholdElectricity\attach_regionnames_to_cluster_output_electric.fmw
+#          --SourceDataset_CSV "\\129.67.26.176\map_data\DHS_Automation\Processing\HouseholdElectricity_201511\Out\All\ElectricityEtcByCluster_All_WithRegion.csv"
+#          --DestDataset_CSV "\\129.67.26.176\map_data\DHS_Automation\Processing\HouseholdElectricity_201511\Out\All"
+#    
+#    
+#! PASSWORD=""
+#! CATEGORY=""
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! LEGAL_TERMS_CONDITIONS=""
+#! VIEW_POSITION="-93.0009 45.0005"
+#! FME_SERVER_SERVICES=""
+#! SHOW_INFO_NODES="true"
+#! FME_REPROJECTION_ENGINE="FME"
+#! SOURCE="NONE"
+#! FME_DOCUMENT_PRIORGUID="d5c3f16a-b0b2-4db3-b66e-fd053abb560a"
+#! DESTINATION_ROUTING_FILE=""
+#! LOG_MAX_PRECISION="Yes"
+#! END_TCL=""
+#! WORKSPACE_VERSION="1"
+#! SOURCE_ROUTING_FILE=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! TITLE=""
+#! DOC_EXTENTS="2150 289"
+#! BEGIN_PYTHON=""
+#! ZOOM_SCALE="100"
+#! IGNORE_READER_FAILURE="No"
+#! REQUIREMENTS_KEYWORD=""
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! HISTORY=""
+#! LAST_SAVE_BUILD="FME(R) 2015.1.3.0 (20151105 - Build 15570 - WIN64)"
+#! ATTR_TYPE_ENCODING="SDF"
+#! BEGIN_TCL=""
+#! LOG_FILE=""
+#! REDIRECT_TERMINATORS="NONE"
+#! MAX_LOG_FEATURES="200"
+#! DOC_TOP_LEFT="100 -355.001"
+#! LAST_SAVE_DATE="2015-11-26T12:20:33"
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! REQUIREMENTS=""
+#! FME_DOCUMENT_GUID="a09a964c-326d-40fb-97a4-d96872925229"
+#! SHOW_ANNOTATIONS="true"
+#! USAGE=""
+#! END_PYTHON=""
+#! DESTINATION="NONE"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! DESCRIPTION=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! FME_BUILD_NUM="15570"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="CSV"
+#! DATASET="$(SourceDataset_CSV)"
+#! KEYWORD="CSV_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_feature_type text fme_text_string text multi_reader_id int multi_reader_type text csv_line_number number(11,0) multi_reader_keyword text csv_number_of_fields number(11,0) fme_rotation float fme_start_angle float fme_color text csv_total_number_of_columns number(11,0) csv_type char(50) fme_type text fme_primary_axis float fme_fill_color text fme_secondary_axis float fme_basename text fme_dataset text multi_reader_full_id int fme_text_size float fme_geometry fme_char(50) fme_sweep_angle float"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15570"
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! COORDSYS=""
+#! MAX_FEATURES=""
+#! FEATURE_TYPES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="CSV"
+#! DATASET="$(DestDataset_CSV)"
+#! KEYWORD="CSV_2"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="csv_append_mode INHERIT_FROM_WRITER csv_field_names INHERIT_FROM_WRITER"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_sweep_angle float fme_color text fme_type text fme_dataset text csv_type char(50) fme_secondary_axis float fme_basename text fme_primary_axis float fme_text_size float fme_feature_type text fme_text_string text fme_geometry fme_char(50) fme_rotation float fme_fill_color text fme_start_angle float"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL CHOICE csv_append_mode INHERIT_FROM_WRITER%yes%no Append to file&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL CHOICE csv_field_names INHERIT_FROM_WRITER%yes%no Output Field Names&quot; INHERIT_FROM_WRITER "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS="&quot;*{}$"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15570"
+#! FANOUT_SUFFIX=""
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! FANOUT="No"
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="auto"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="x_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="y_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="z_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="auto"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="x_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="y_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="z_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="CSV"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="ElectricityEtcByCluster_All_WithRegion"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="csv_none"
+#! POSITION="100 -230"
+#! BOUNDING_RECT="100 -230 848.009 71"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="CSV_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SurveyID" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country" ATTR_TYPE="char(26)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ISO3" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Year" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV001_Cluster" ATTR_TYPE="number(8,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV024_SvyRegionID" ATTR_TYPE="number(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_LATNUM" ATTR_TYPE="number(17,13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_LONGNUM" ATTR_TYPE="number(15,11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV206_HasElectricity._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV206_HasElectricity._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV207_HasRadio._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV207_HasRadio._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV208_HasTelevision._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV208_HasTelevision._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV209_HasRefrigerator._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV209_HasRefrigerator._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV210_HasBicycle._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV210_HasBicycle._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV211_HasMotorbike._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV211_HasMotorbike._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV212_HasCar._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV212_HasCar._Sum" ATTR_TYPE="number(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV221_HasTelephone._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV221_HasTelephone._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="ElectricityEtcByCluster_All_WithRegionAndName"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="6"
+#! FEAT_GEOMTYPE="All"
+#! POSITION="2250 -300"
+#! BOUNDING_RECT="2250 -300 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="CSV_2"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SurveyID" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country" ATTR_TYPE="char(26)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ISO3" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Year" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV001_Cluster" ATTR_TYPE="number(8,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV024_SvyRegionID" ATTR_TYPE="number(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_LATNUM" ATTR_TYPE="number(17,13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_LONGNUM" ATTR_TYPE="number(15,11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_RegionNameDHS" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_RegionNameOther" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_RegionDescription" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Spatial_RegionationStrategy" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV206_HasElectricity._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV206_HasElectricity._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV207_HasRadio._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV207_HasRadio._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV208_HasTelevision._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV208_HasTelevision._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV209_HasRefrigerator._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV209_HasRefrigerator._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV210_HasBicycle._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV210_HasBicycle._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV211_HasMotorbike._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV211_HasMotorbike._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV212_HasCar._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV212_HasCar._Sum" ATTR_TYPE="number(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV221_HasTelephone._Count" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HV221_HasTelephone._Sum" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="csv_field_names" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! <DEFLINE_PARM PARM_NAME="csv_append_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_CSV CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):"
+#! DEFAULT_VALUE="\\129.67.26.176\map_data\DHS_Automation\Processing\HouseholdElectricity_201511\Out\All\ElectricityEtcByCluster_All_WithRegion.csv"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_CSV Destination CSV (CommaSeparatedValue) Folder:"
+#! DEFAULT_VALUE="\\129.67.26.176\map_data\DHS_Automation\Processing\HouseholdElectricity_201511\Out\All"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="11"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Followup request number 2: attach the region names as well as the IDs(!)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="150 -66.0007"
+#! TOP_LEFT="150 -66.0007"
+#! BOTTOM_RIGHT="900 -116.001"
+#! BOUNDING_RECT="150 -66.0007 750 50"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.196078"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="Joiner"
+#! VERSION="4"
+#! POSITION="1138.01 -230"
+#! BOUNDING_RECT="1138.01 -230 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15570"
+#! >
+#! <OUTPUT_FEAT NAME="JOINED"/>
+#! <XFORM_ATTR ATTR_NAME="SurveyID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ISO3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV001_Cluster" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV024_SvyRegionID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_LATNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_LONGNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV206_HasElectricity._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV206_HasElectricity._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV207_HasRadio._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV207_HasRadio._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV208_HasTelevision._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV208_HasTelevision._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV209_HasRefrigerator._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV209_HasRefrigerator._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV210_HasBicycle._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV210_HasBicycle._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV211_HasMotorbike._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV211_HasMotorbike._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV212_HasCar._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV212_HasCar._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV221_HasTelephone._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV221_HasTelephone._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DHSREGEN" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="REGNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LEVELCO" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SVYNOTES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="FILEGDB_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,&quot;IGNORE TEXT&quot;,FILEGDB&lt;space&gt;"/>
+#! <XFORM_PARM PARM_NAME="PREFETCH_EXHAUSTIVE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="&lt;backslash&gt;&lt;backslash&gt;129.67.26.176&lt;backslash&gt;map_data&lt;backslash&gt;DHS_Automation&lt;backslash&gt;SupportingInfo&lt;backslash&gt;DHS_Boundary_Data&lt;backslash&gt;full_download&lt;backslash&gt;sdr_subnational_boundaries_all_surveys.gdb"/>
+#! <XFORM_PARM PARM_NAME="TRIM_KEY_FIELDS_DISPLAY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JOINED_LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FILEGDB_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="JOIN_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TABLE" PARM_VALUE="dhs_subnational_boundaries_all_surveys"/>
+#! <XFORM_PARM PARM_NAME="CACHE_SIZE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="FILEGDB"/>
+#! <XFORM_PARM PARM_NAME="ADDED_FIELDS" PARM_VALUE="DHSREGEN&lt;space&gt;REGNAME&lt;space&gt;LEVELCO&lt;space&gt;SVYNOTES"/>
+#! <XFORM_PARM PARM_NAME="MATCHED_ATTR_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Joiner"/>
+#! <XFORM_PARM PARM_NAME="OPTIMIZE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MATCH_RULE_DISPLAY" PARM_VALUE="Must Match Zero or One (1:0..1)"/>
+#! <XFORM_PARM PARM_NAME="JOINED_ATTRIBUTE_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="SurveyID&lt;space&gt;SVYID&lt;space&gt;HV024_SvyRegionID&lt;space&gt;REGCODE"/>
+#! <XFORM_PARM PARM_NAME="PREFETCH_QUERY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MATCH_MULTIPLE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="AttributeRenamer"
+#! VERSION="3"
+#! POSITION="1650 -355.001"
+#! BOUNDING_RECT="1650 -355.001 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15570"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="SurveyID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ISO3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV001_Cluster" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV024_SvyRegionID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_LATNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_LONGNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV206_HasElectricity._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV206_HasElectricity._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV207_HasRadio._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV207_HasRadio._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV208_HasTelevision._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV208_HasTelevision._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV209_HasRefrigerator._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV209_HasRefrigerator._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV210_HasBicycle._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV210_HasBicycle._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV211_HasMotorbike._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV211_HasMotorbike._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV212_HasCar._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV212_HasCar._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV221_HasTelephone._Count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HV221_HasTelephone._Sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_RegionNameDHS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_RegionNameOther" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_RegionDescription" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Spatial_RegionationStrategy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="DHSREGEN,Spatial_RegionNameDHS,,REGNAME,Spatial_RegionNameOther,,LEVELCO,Spatial_RegionDescription,,SVYNOTES,Spatial_RegionationStrategy,"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeRenamer"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="3"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="9"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="10"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_CSV_1,CSV_IN_NETWORK_AUTHENTICATION_CSV_1,_SKIP_LINES_CSV_1,_SKIP_FOOTER_CSV_1,_STRIP_QUOTES_CSV_1,_DUPLICATE_DELIMS_CSV_1,SORT_GROUP_CSV_1,_SORT_PARAMS_CSV_1,FILTER_GROUP_CSV_1,_FILTER_PARAMS_CSV_1,_ENCODING_CSV_1,DestDataset_CSV_2,CSV_OUT_EXTENSION_CSV_2,CSV_OUT_APPEND_CSV_2,CSV_OUT_FIELD_NAMES_CSV_2,CSV_OUT_SEPARATOR_CSV_2,CSV_OUT_ENCODING_CSV_2,CSV_OUT_WRITE_UTF8_BOM_CSV_2,CSV_OUT_QUOTE_OUTPUT_CSV_2,CSV_OUT_QUOTE_FIELD_NAMES_CSV_2,CSV_OUT_END_OF_LINE_CSV_2
+DEFAULT_MACRO SourceDataset_CSV \\129.67.26.176\map_data\DHS_Automation\Processing\HouseholdElectricity_201511\Out\All\ElectricityEtcByCluster_All_WithRegion.csv
+GUI MULTIFILE SourceDataset_CSV CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+DEFAULT_MACRO DestDataset_CSV \\129.67.26.176\map_data\DHS_Automation\Processing\HouseholdElectricity_201511\Out\All
+GUI DIRNAME DestDataset_CSV Destination CSV (CommaSeparatedValue) Folder:
+INCLUDE [ if {{$(SourceDataset_CSV)} == {}} { puts_real {Parameter 'SourceDataset_CSV' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_CSV)} == {}} { puts_real {Parameter 'DestDataset_CSV' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE CSV
+READER_KEYWORD CSV_1
+READER_GEN_DIRECTIVES groupBox_5,,_ENCODING,,groupBox_6,,_FILTER_PARAMS,,_FILTER_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Field<space>Name<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>SurveyID%Country%ISO3%Year%HV001_Cluster%HV024_SvyRegionID%Spatial_LATNUM%Spatial_LONGNUM%HV206_HasElectricity._Count%HV206_HasElectricity._Sum%HV207_HasRadio._Count%HV207_HasRadio._Sum%HV208_HasTelevision._Count%HV208_HasTelevision._Sum%HV209_HasRefrigerator._Count%HV209_HasRefrigerator._Sum%HV210_HasBicycle._Count%HV210_HasBicycle._Sum%HV211_HasMotorbike._Count%HV211_HasMotorbike._Sum%HV212_HasCar._Count%HV212_HasCar._Sum%HV221_HasTelephone._Count%HV221_HasTelephone._Sum<backslash><quote>%%<backslash><quote>Filter<backslash><quote>%<backslash><quote>STRING_ENCODED<space>_FILTER_REGEX<space><backslash><quote>%%<backslash><quote>Invert<space>Filter<backslash><quote>%<backslash><quote>CHECKBOX<space>_FILTER_UNMATCHED<space>yes%no<backslash><quote>%no<quote>,SCAN_MAX_FEATURES,1000,_SKIP_FOOTER,0,_IN_FIELD_NAMES,YES,SORT_GROUP,NO,_DUPLICATE_DELIMS,no,_SORT_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Attribute<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>SurveyID%Country%ISO3%Year%HV001_Cluster%HV024_SvyRegionID%Spatial_LATNUM%Spatial_LONGNUM%HV206_HasElectricity._Count%HV206_HasElectricity._Sum%HV207_HasRadio._Count%HV207_HasRadio._Sum%HV208_HasTelevision._Count%HV208_HasTelevision._Sum%HV209_HasRefrigerator._Count%HV209_HasRefrigerator._Sum%HV210_HasBicycle._Count%HV210_HasBicycle._Sum%HV211_HasMotorbike._Count%HV211_HasMotorbike._Sum%HV212_HasCar._Count%HV212_HasCar._Sum%HV221_HasTelephone._Count%HV221_HasTelephone._Sum<backslash><quote>%%<backslash><quote>Alpha<solidus>Num<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_CHOICE<space>Alphabetic<comma>alphabetic%Numeric<comma>numeric<backslash><quote>%alphabetic%<backslash><quote>Order<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_ORDER<space>Ascending<comma>ascending%Descending<comma>descending<backslash><quote>%ascending<quote>,_SCHEMA_WITH_COL_NAMES,SurveyID<comma>number<comma>4<comma>0<comma>Country<comma>char<comma>26<comma><comma>ISO3<comma>char<comma>4<comma><comma>Year<comma>char<comma>8<comma><comma>HV001_Cluster<comma>number<comma>8<comma>0<comma>HV024_SvyRegionID<comma>number<comma>3<comma>0<comma>Spatial_LATNUM<comma>number<comma>17<comma>13<comma>Spatial_LONGNUM<comma>number<comma>15<comma>11<comma>HV206_HasElectricity._Count<comma>number<comma>5<comma>0<comma>HV206_HasElectricity._Sum<comma>number<comma>4<comma>0<comma>HV207_HasRadio._Count<comma>number<comma>5<comma>0<comma>HV207_HasRadio._Sum<comma>number<comma>4<comma>0<comma>HV208_HasTelevision._Count<comma>number<comma>5<comma>0<comma>HV208_HasTelevision._Sum<comma>number<comma>4<comma>0<comma>HV209_HasRefrigerator._Count<comma>number<comma>5<comma>0<comma>HV209_HasRefrigerator._Sum<comma>number<comma>4<comma>0<comma>HV210_HasBicycle._Count<comma>number<comma>5<comma>0<comma>HV210_HasBicycle._Sum<comma>number<comma>4<comma>0<comma>HV211_HasMotorbike._Count<comma>number<comma>5<comma>0<comma>HV211_HasMotorbike._Sum<comma>number<comma>4<comma>0<comma>HV212_HasCar._Count<comma>number<comma>5<comma>0<comma>HV212_HasCar._Sum<comma>number<comma>3<comma>0<comma>HV221_HasTelephone._Count<comma>number<comma>5<comma>0<comma>HV221_HasTelephone._Sum<comma>number<comma>4<comma>0,_SCHEMA,number<comma>4<comma>0<comma>char<comma>26<comma><comma>char<comma>4<comma><comma>char<comma>8<comma><comma>number<comma>8<comma>0<comma>number<comma>3<comma>0<comma>number<comma>17<comma>13<comma>number<comma>15<comma>11<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>3<comma>0<comma>number<comma>5<comma>0<comma>number<comma>4<comma>0,_SORT_PARAMS,,_STRIP_QUOTES,yes,_GROUP_BY_DATASET,yes,groupBox,,_FIELD_NAMES_AFTER_HEADER,no,_MERGE_SCHEMAS,YES,_ALLOW_SPACES_IN_COLUMN_NAMES,yes,_SKIP_LINES,1,_IN_SEPARATOR,<comma>,groupBox_2,,groupBox_4,,FILTER_GROUP,NO
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} CSV
+MULTI_WRITER_KEYWORD{0} CSV_2
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source of the CSV files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_1
+DEFAULT_MACRO SourceDataset_CSV_1 $(SourceDataset_CSV)
+GUI MULTIFILE SourceDataset_CSV_1 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+# ============================================================================
+# Hardcode the settings that were used to generate this mapping file
+#
+DEFAULT_MACRO _SCHEMA_CSV_1 number,4,0,char,26,,char,4,,char,8,,number,8,0,number,3,0,number,17,13,number,15,11,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,3,0,number,5,0,number,4,0
+DEFAULT_MACRO _IN_FIELD_NAMES_CSV_1 YES
+DEFAULT_MACRO _FIELD_NAMES_AFTER_HEADER_CSV_1 no
+DEFAULT_MACRO _EXTENSION_CSV_1 CSV
+DEFAULT_MACRO _ALLOW_SPACES_IN_COLUMN_NAMES_CSV_1 yes
+DEFAULT_MACRO _GROUP_BY_DATASET_CSV_1 yes
+CSV_1_SCHEMA number,4,0,char,26,,char,4,,char,8,,number,8,0,number,3,0,number,17,13,number,15,11,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,4,0,number,5,0,number,3,0,number,5,0,number,4,0
+DEFAULT_MACRO _SKIP_LINES_CSV_1 1
+CSV_1_SKIP_LINES $(_SKIP_LINES_CSV_1)
+DEFAULT_MACRO _SKIP_FOOTER_CSV_1 0
+CSV_1_SKIP_FOOTER $(_SKIP_FOOTER_CSV_1)
+CSV_1_FIELD_NAMES $(_IN_FIELD_NAMES_CSV_1)
+CSV_1_FIELD_NAMES_AFTER_HEADER $(_FIELD_NAMES_AFTER_HEADER_CSV_1)
+DEFAULT_MACRO _STRIP_QUOTES_CSV_1 yes
+CSV_1_STRIP_QUOTES $(_STRIP_QUOTES_CSV_1)
+CSV_1_SEPARATOR (",")
+CSV_1_EXTENSION CSV
+DEFAULT_MACRO _DUPLICATE_DELIMS_CSV_1 no
+CSV_1_DUPLICATE_DELIMS $(_DUPLICATE_DELIMS_CSV_1)
+CSV_1_SEQUENCED no
+CSV_1_ALLOW_SPACES_IN_COLUMN_NAMES $(_ALLOW_SPACES_IN_COLUMN_NAMES_CSV_1)
+CSV_1_GROUP_BY_DATASET $(_GROUP_BY_DATASET_CSV_1)
+DEFAULT_MACRO SORT_GROUP_CSV_1 NO
+CSV_1_SORT_GROUP $(SORT_GROUP_CSV_1)
+DEFAULT_MACRO _SORT_PARAMS_CSV_1 
+CSV_1_SORT_PARAMS $(_SORT_PARAMS_CSV_1)
+DEFAULT_MACRO FILTER_GROUP_CSV_1 NO
+CSV_1_FILTER_GROUP $(FILTER_GROUP_CSV_1)
+DEFAULT_MACRO _FILTER_PARAMS_CSV_1 
+CSV_1_FILTER_PARAMS $(_FILTER_PARAMS_CSV_1)
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or csv_.
+CSV_1_UNENCODED_ATTR_PREFIX fme_ csv_
+# ===========================================================================
+DEFAULT_MACRO CSV_IN_NETWORK_AUTHENTICATION_CSV_1 
+CSV_1_NETWORK_AUTHENTICATION "$(CSV_IN_NETWORK_AUTHENTICATION_CSV_1)"
+GUI OPTIONAL AUTHENTICATOR CSV_IN_NETWORK_AUTHENTICATION_CSV_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+GUI INTEGER _SKIP_LINES_CSV_1 Number of Lines to Skip:
+GUI INTEGER _SKIP_FOOTER_CSV_1 Number of Footer Lines to Skip:
+# GUI CHOICE _IN_FIELD_NAMES yes%no Field Names in File:
+# GUI CHOICE _FIELD_NAMES_AFTER_HEADER yes%no Field After Header:
+GUI CHOICE _STRIP_QUOTES_CSV_1 yes%no Strip Quotes From Fields:
+# GUI TEXT _IN_SEPARATOR Field Delimiter:
+# GUI TEXT _EXTENSION Default File Extension:
+GUI CHOICE _DUPLICATE_DELIMS_CSV_1 yes%no Skip Duplicate Delimiters:
+GUI CHOICE SORT_GROUP_CSV_1 yes%no Sorting Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _SORT_PARAMS_CSV_1 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Attribute"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES SurveyID%Country%ISO3%Year%HV001_Cluster%HV024_SvyRegionID%Spatial_LATNUM%Spatial_LONGNUM%HV206_HasElectricity._Count%HV206_HasElectricity._Sum%HV207_HasRadio._Count%HV207_HasRadio._Sum%HV208_HasTelevision._Count%HV208_HasTelevision._Sum%HV209_HasRefrigerator._Count%HV209_HasRefrigerator._Sum%HV210_HasBicycle._Count%HV210_HasBicycle._Sum%HV211_HasMotorbike._Count%HV211_HasMotorbike._Sum%HV212_HasCar._Count%HV212_HasCar._Sum%HV221_HasTelephone._Count%HV221_HasTelephone._Sum"%%"Alpha/Num"%"LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric"%alphabetic%"Order"%"LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending"%ascending Sorting Parameters:
+GUI CHOICE FILTER_GROUP_CSV_1 yes%no Filter Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _FILTER_PARAMS_CSV_1 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Field Name"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES SurveyID%Country%ISO3%Year%HV001_Cluster%HV024_SvyRegionID%Spatial_LATNUM%Spatial_LONGNUM%HV206_HasElectricity._Count%HV206_HasElectricity._Sum%HV207_HasRadio._Count%HV207_HasRadio._Sum%HV208_HasTelevision._Count%HV208_HasTelevision._Sum%HV209_HasRefrigerator._Count%HV209_HasRefrigerator._Sum%HV210_HasBicycle._Count%HV210_HasBicycle._Sum%HV211_HasMotorbike._Count%HV211_HasMotorbike._Sum%HV212_HasCar._Count%HV212_HasCar._Sum%HV221_HasTelephone._Count%HV221_HasTelephone._Sum"%%"Filter"%"STRING_ENCODED _FILTER_REGEX "%%"Invert Filter"%"CHECKBOX _FILTER_UNMATCHED yes%no"%no Filter Parameters:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO _ENCODING_CSV_1 
+GUI OPTIONAL STRING_OR_ENCODING _ENCODING_CSV_1 SYSTEM%* Character Encoding:
+CSV_1_ENCODING $(_ENCODING_CSV_1)
+CSV_1_DATASET "$(SourceDataset_CSV_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_2
+# ============================================================================
+# The following GUI line prompts for a folder where the
+# CSV files will be stored
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_CSV_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_2
+DEFAULT_MACRO DestDataset_CSV_2 $(DestDataset_CSV)
+GUI DIRNAME DestDataset_CSV_2 Destination CSV (CommaSeparatedValue) Folder:
+CSV_2_PLUGIN_MAX_CHANNELS 100
+CSV_2_ALLOW_TYPE_TRUNCATION yes
+CSV_2_PERMISSIVE_TYPES yes
+# ============================================================================
+# The following determines the extension for output CSV files
+DEFAULT_MACRO CSV_OUT_EXTENSION_CSV_2 csv
+CSV_2_EXTENSION "$(CSV_OUT_EXTENSION_CSV_2)"
+GUI OPTIONAL TEXT CSV_OUT_EXTENSION_CSV_2 Extension:
+# =====================================================================
+# Allows one to append
+DEFAULT_MACRO CSV_OUT_APPEND_CSV_2 No
+CSV_2_APPEND "$(CSV_OUT_APPEND_CSV_2)"
+GUI CHECKBOX CSV_OUT_APPEND_CSV_2 Yes%No Append to File:
+# ============================================================================
+# The following determines whether field names will be written on
+# the first row of the file.
+DEFAULT_MACRO CSV_OUT_FIELD_NAMES_CSV_2 yes
+CSV_2_FIELD_NAMES "$(CSV_OUT_FIELD_NAMES_CSV_2)"
+GUI CHECKBOX CSV_OUT_FIELD_NAMES_CSV_2 yes%no Output Field Names on First Line:
+# ============================================================================
+# The following determines the field seperator
+# PR#19714 Changed GUI LOOKUP to STRING_OR_CHOICE for showing space and tab
+# as explicit delimiters for parsing issues and symmetry with the reader.
+DEFAULT_MACRO CSV_OUT_SEPARATOR_CSV_2 ,
+CSV_2_SEPARATOR "$(CSV_OUT_SEPARATOR_CSV_2)"
+GUI OPTIONAL STRING_OR_CHOICE CSV_OUT_SEPARATOR_CSV_2 ,%;%|%space%tab Separator Character:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO CSV_OUT_ENCODING_CSV_2 
+CSV_2_ENCODING "$(CSV_OUT_ENCODING_CSV_2)"
+GUI OPTIONAL STRING_OR_ENCODING CSV_OUT_ENCODING_CSV_2 SYSTEM%* Character Encoding:
+# =====================================================================
+# PR 15909
+# The following choice determines if the byte order mark should be written
+# when using UTF-8 encoding. By default BOM is written, so _WRITE_UTF8_BOM should be yes.
+DEFAULT_MACRO CSV_OUT_WRITE_UTF8_BOM_CSV_2 yes
+CSV_2_WRITE_UTF8_BOM "$(CSV_OUT_WRITE_UTF8_BOM_CSV_2)"
+GUI CHOICE CSV_OUT_WRITE_UTF8_BOM_CSV_2 yes%no Write UTF-8 Byte Order Mark
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO CSV_OUT_DESTINATION_DATASETTYPE_VALIDATION_CSV_2 Yes
+CSV_2_DESTINATION_DATASETTYPE_VALIDATION "$(CSV_OUT_DESTINATION_DATASETTYPE_VALIDATION_CSV_2)"
+# =====================================================================
+DEFAULT_MACRO CSV_OUT_QUOTE_OUTPUT_CSV_2 if_needed
+CSV_2_QUOTE_OUTPUT "$(CSV_OUT_QUOTE_OUTPUT_CSV_2)"
+GUI CHOICE CSV_OUT_QUOTE_OUTPUT_CSV_2 yes%if_needed%no Quote Output Values:
+DEFAULT_MACRO CSV_OUT_QUOTE_FIELD_NAMES_CSV_2 no
+CSV_2_QUOTE_FIELD_NAMES "$(CSV_OUT_QUOTE_FIELD_NAMES_CSV_2)"
+GUI CHOICE CSV_OUT_QUOTE_FIELD_NAMES_CSV_2 yes%no Quote Field Names:
+DEFAULT_MACRO CSV_OUT_END_OF_LINE_CSV_2 
+CSV_2_END_OF_LINE "$(CSV_OUT_END_OF_LINE_CSV_2)"
+GUI OPTIONAL CHOICE CSV_OUT_END_OF_LINE_CSV_2 Windows%Unix%Macintosh Line Termination:
+CSV_2_DATASET "$(DestDataset_CSV_2)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)attach_regionnames_to_cluster_output_electric.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_CSV_1 CSV_1
+DEFAULT_MACRO DATASET_KEYWORD_CSV_2 CSV_2
+# -------------------------------------------------------------------------
+
+CSV_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME attach_regionnames_to_cluster_output_electric
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+CSV_1_DEF ElectricityEtcByCluster_All_WithRegion   SurveyID                     number(4,0)   Country                      char(26)   ISO3                         char(4)   Year                         char(8)   HV001_Cluster                number(8,0)   HV024_SvyRegionID            number(3,0)   Spatial_LATNUM               number(17,13)   Spatial_LONGNUM              number(15,11)   HV206_HasElectricity._Count  number(5,0)   HV206_HasElectricity._Sum    number(4,0)   HV207_HasRadio._Count        number(5,0)   HV207_HasRadio._Sum          number(4,0)   HV208_HasTelevision._Count   number(5,0)   HV208_HasTelevision._Sum     number(4,0)   HV209_HasRefrigerator._Count number(5,0)   HV209_HasRefrigerator._Sum   number(4,0)   HV210_HasBicycle._Count      number(5,0)   HV210_HasBicycle._Sum        number(4,0)   HV211_HasMotorbike._Count    number(5,0)   HV211_HasMotorbike._Sum      number(4,0)   HV212_HasCar._Count          number(5,0)   HV212_HasCar._Sum            number(3,0)   HV221_HasTelephone._Count    number(5,0)   HV221_HasTelephone._Sum      number(4,0)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *       @SupplyAttributes(multi_reader_keyword,CSV_1)    ROUTE CSV CSV_1::ElectricityEtcByCluster_All_WithRegion TO FME_GENERIC ::ElectricityEtcByCluster_All_WithRegion ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+CSV_1_MERGE_DEF CSV_1::ElectricityEtcByCluster_All_WithRegion EXACT ElectricityEtcByCluster_All_WithRegion
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+MACRO Joiner_DIRECTIVES QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS Yes
+
+INCLUDE [    if { {MUST_MATCH_ZERO_OR_ONE} == {MATCH_ALL} } {       puts {MACRO Joiner_ONE_FEATURE_PER_JOIN <Unused>};    } else {       puts {MACRO Joiner_ONE_FEATURE_PER_JOIN YES};    } ]
+FACTORY_DEF * JoinFactory    FACTORY_NAME Joiner    INPUT  FEATURE_TYPE ElectricityEtcByCluster_All_WithRegion    READER_TYPE             FILEGDB    READER_DATASET          "<backslash><backslash>129.67.26.176<backslash>map_data<backslash>DHS_Automation<backslash>SupportingInfo<backslash>DHS_Boundary_Data<backslash>full_download<backslash>sdr_subnational_boundaries_all_surveys.gdb"    TABLE_ID                "dhs_subnational_boundaries_all_surveys"    READER_PARAMS           $(Joiner_DIRECTIVES)    JOIN_KEYS               SurveyID<space>SVYID<space>HV024_SvyRegionID<space>REGCODE    ADDED_FIELDS            DHSREGEN<space>REGNAME<space>LEVELCO<space>SVYNOTES    COMBINE_ATTRIBUTES      PREFIX_JOINED    MATCH_RULE              MUST_MATCH_ZERO_OR_ONE    ONE_FEATURE_PER_JOIN    $(Joiner_ONE_FEATURE_PER_JOIN)    JOIN_ID                 "Joiner"    OUTPUT JOINED FEATURE_TYPE Joiner_JOINED
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeRenamer    INPUT  FEATURE_TYPE Joiner_JOINED    OUTPUT FEATURE_TYPE AttributeRenamer_OUTPUT         @RenameAttributes(ATTR_LIST_DEF_VAL_ENCODED, DHSREGEN,Spatial_RegionNameDHS,,REGNAME,Spatial_RegionNameOther,,LEVELCO,Spatial_RegionDescription,,SVYNOTES,Spatial_RegionationStrategy,)
+
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC AttributeRenamer_OUTPUT TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>ElectricityEtcByCluster_All_WithRegionAndName<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+CSV_2_DEF ElectricityEtcByCluster_All_WithRegionAndName   csv_append_mode              INHERIT_FROM_WRITER   csv_field_names              INHERIT_FROM_WRITER   SurveyID                     number(4,0)   Country                      char(26)   ISO3                         char(4)   Year                         char(8)   HV001_Cluster                number(8,0)   HV024_SvyRegionID            number(3,0)   Spatial_LATNUM               number(17,13)   Spatial_LONGNUM              number(15,11)   Spatial_RegionNameDHS        auto   Spatial_RegionNameOther      auto   Spatial_RegionDescription    auto   Spatial_RegionationStrategy  auto   HV206_HasElectricity._Count  number(5,0)   HV206_HasElectricity._Sum    number(4,0)   HV207_HasRadio._Count        number(5,0)   HV207_HasRadio._Sum          number(4,0)   HV208_HasTelevision._Count   number(5,0)   HV208_HasTelevision._Sum     number(4,0)   HV209_HasRefrigerator._Count number(5,0)   HV209_HasRefrigerator._Sum   number(4,0)   HV210_HasBicycle._Count      number(5,0)   HV210_HasBicycle._Sum        number(4,0)   HV211_HasMotorbike._Count    number(5,0)   HV211_HasMotorbike._Sum      number(4,0)   HV212_HasCar._Count          number(5,0)   HV212_HasCar._Sum            number(3,0)   HV221_HasTelephone._Count    number(5,0)   HV221_HasTelephone._Sum      number(4,0)

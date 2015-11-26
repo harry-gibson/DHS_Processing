@@ -1,0 +1,1656 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files\FME\fme.exe" \\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Code\Combine_National_Data_With_Indicators_Final_Output.fmw
+#          --SourceDataset_CSV "\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Indicators\SurveyIndicatorsAnyYr.csv"
+#          --SourceDataset_CSV_5 "\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Results\Weighting\National\NationalSurveyResults_Weighted.csv"
+#          --DestDataset_CSV "\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Results\Weighting\National"
+#    
+#    
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! FME_SERVER_SERVICES=""
+#! DOC_EXTENTS="3350.01 1852.5"
+#! REQUIREMENTS_KEYWORD=""
+#! SHOW_INFO_NODES="true"
+#! HISTORY=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! FME_REPROJECTION_ENGINE="FME"
+#! FME_BUILD_NUM="15570"
+#! MAX_LOG_FEATURES="200"
+#! REDIRECT_TERMINATORS="NONE"
+#! LAST_SAVE_DATE="2015-11-16T15:29:47"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! PASSWORD=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! VIEW_POSITION="-42.0004 -48.0005"
+#! BEGIN_TCL=""
+#! SHOW_ANNOTATIONS="true"
+#! LOG_MAX_PRECISION="Yes"
+#! END_PYTHON=""
+#! WORKSPACE_VERSION="1"
+#! USAGE=""
+#! ZOOM_SCALE="100"
+#! REQUIREMENTS=""
+#! LAST_SAVE_BUILD="FME(R) 2015.1.3.0 (20151105 - Build 15570 - WIN64)"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! FME_DOCUMENT_PRIORGUID="51c601c4-bfd2-4f95-95a8-655b3f3d9b43,5ade90d5-484f-4fb7-9045-5bb762aed3be,a8b2923f-b704-4b79-80a7-2cad217236df,54c5a0ca-d915-4628-b1b5-195bd53081ca,21f80980-96b9-457d-8afe-6502c47099af"
+#! SOURCE="NONE"
+#! DESTINATION="NONE"
+#! DESTINATION_ROUTING_FILE=""
+#! DESCRIPTION=""
+#! SOURCE_ROUTING_FILE=""
+#! BEGIN_PYTHON=""
+#! IGNORE_READER_FAILURE="No"
+#! LOG_FILE=""
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! CATEGORY=""
+#! FME_DOCUMENT_GUID="bbcff282-2808-478a-9c9e-b399a7a508f5"
+#! END_TCL=""
+#! DOC_TOP_LEFT="0.99901 -2002.5"
+#! LEGAL_TERMS_CONDITIONS=""
+#! TITLE=""
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="CSV"
+#! DATASET="$(SourceDataset_CSV)"
+#! KEYWORD="CSV_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_dataset text fme_fill_color text fme_sweep_angle float fme_secondary_axis float csv_total_number_of_columns number(11,0) multi_reader_full_id int multi_reader_type text fme_feature_type text csv_type char(50) fme_type text fme_text_string text multi_reader_id int csv_line_number number(11,0) fme_rotation float fme_color text csv_number_of_fields number(11,0) fme_text_size float multi_reader_keyword text fme_start_angle float fme_primary_axis float fme_basename text fme_geometry fme_char(50)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15485"
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! COORDSYS=""
+#! MAX_FEATURES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="CSV"
+#! DATASET="$(SourceDataset_CSV_5)"
+#! KEYWORD="CSV_2"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_dataset text fme_fill_color text fme_sweep_angle float fme_secondary_axis float csv_total_number_of_columns number(11,0) multi_reader_full_id int multi_reader_type text fme_feature_type text csv_type char(50) fme_type text fme_text_string text multi_reader_id int csv_line_number number(11,0) fme_rotation float fme_color text csv_number_of_fields number(11,0) fme_text_size float multi_reader_keyword text fme_start_angle float fme_primary_axis float fme_basename text fme_geometry fme_char(50)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15485"
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! COORDSYS=""
+#! MAX_FEATURES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="CSV"
+#! DATASET="$(DestDataset_CSV)"
+#! KEYWORD="CSV_3"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="csv_append_mode INHERIT_FROM_WRITER csv_field_names INHERIT_FROM_WRITER"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size float fme_text_string text fme_start_angle float fme_type text fme_sweep_angle float fme_fill_color text fme_color text csv_type char(50) fme_primary_axis float fme_basename text fme_feature_type text fme_dataset text fme_geometry fme_char(50) fme_rotation float fme_secondary_axis float"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL CHOICE csv_append_mode INHERIT_FROM_WRITER%yes%no Append to file&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL CHOICE csv_field_names INHERIT_FROM_WRITER%yes%no Output Field Names&quot; INHERIT_FROM_WRITER "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS="&quot;*{}$"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15485"
+#! FANOUT_ID_ATTR=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! COORDSYS=""
+#! FANOUT_PREFIX=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="auto"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="x_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="y_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="z_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="auto"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="x_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="y_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="z_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="CSV"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="SurveyIndicatorsAnyYr"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="csv_none"
+#! POSITION="0.99901 -230"
+#! BOUNDING_RECT="0.99901 -230 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="CSV_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country" ATTR_TYPE="char(33)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Survey_ID_num" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="yrTo" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Electricity" ATTR_TYPE="number(10,5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Electricity_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDP" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDP_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPGrowth" ATTR_TYPE="number(12,9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPGrowth_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPpercap" ATTR_TYPE="number(13,7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPpercap_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GNIpercap" ATTR_TYPE="number(6,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GNIpercap_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExpercap" ATTR_TYPE="number(13,9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExpercap_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExPub" ATTR_TYPE="number(12,9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExPub_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExTotal" ATTR_TYPE="number(12,9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExTotal_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Literacy" ATTR_TYPE="number(12,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Literacy_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PregWomenCare" ATTR_TYPE="number(5,1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PregWomenCare_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PrimaryComplete" ATTR_TYPE="number(12,8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PrimaryComplete_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RuralPop" ATTR_TYPE="number(6,3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RuralPop_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="UrbanPop" ATTR_TYPE="number(6,3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="UrbanPop_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CommHlthWrkrs" ATTR_TYPE="number(5,3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CommHlthWrkrs_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DPT" ATTR_TYPE="number(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DPT_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NurseMidwives" ATTR_TYPE="number(6,3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NurseMidwives_IndicatorYearUsed" ATTR_TYPE="number(5,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country_DHSCode" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country_ISO3Code" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="NationalSurveyResults_Weighted"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="csv_none"
+#! POSITION="0.99901 -2002.5"
+#! BOUNDING_RECT="0.99901 -2002.5 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="CSV_2"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="filecode" ATTR_TYPE="char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_any_treat_RegionCount._sum" ATTR_TYPE="number(17,12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_full_treat_RegionCount._sum" ATTR_TYPE="number(17,12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_occurrence_RegionCount._sum" ATTR_TYPE="number(18,12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="total_children_RegionCount._sum" ATTR_TYPE="number(18,11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="total_young_RegionCount._sum" ATTR_TYPE="number(17,11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_full_treat_TotalProp" ATTR_TYPE="number(19,16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_any_treat_TotalProp" ATTR_TYPE="number(18,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_occurrence_TotalProp" ATTR_TYPE="number(18,16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="national_fever_with_indicators_updated"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="20"
+#! FEAT_GEOMTYPE="All"
+#! POSITION="3351.01 -150"
+#! BOUNDING_RECT="3351.01 -150 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="CSV_3"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Survey_ID_num" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country_DHSCode" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country_ISO3Code" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="yrTo" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="filecode" ATTR_TYPE="char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_any_treat_RegionCount._sum" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_full_treat_RegionCount._sum" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_occurrence_RegionCount._sum" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="total_children_RegionCount._sum" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="total_young_RegionCount._sum" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_full_treat_TotalProp" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_any_treat_TotalProp" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="fever_occurrence_TotalProp" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Electricity" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Electricity_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDP" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDP_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPGrowth" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPGrowth_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPpercap" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GDPpercap_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GNIpercap" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GNIpercap_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExpercap" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExpercap_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExPub" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExPub_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExTotal" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HealthExTotal_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Literacy" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Literacy_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PregWomenCare" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PregWomenCare_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PrimaryComplete" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PrimaryComplete_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RuralPop" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RuralPop_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="UrbanPop" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="UrbanPop_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CommHlthWrkrs" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CommHlthWrkrs_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DPT" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DPT_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NurseMidwives" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NurseMidwives_IndicatorYearUsed" ATTR_TYPE="auto" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="csv_field_names" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! <DEFLINE_PARM PARM_NAME="csv_append_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_CSV CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):"
+#! DEFAULT_VALUE="\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Indicators\SurveyIndicatorsAnyYr.csv"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_CSV_5 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):"
+#! DEFAULT_VALUE="\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Results\Weighting\National\NationalSurveyResults_Weighted.csv"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_CSV Destination CSV (CommaSeparatedValue) Folder:"
+#! DEFAULT_VALUE="\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Results\Weighting\National"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="3"
+#! TYPE="StringSearcher"
+#! VERSION="2"
+#! POSITION="600 -1800"
+#! BOUNDING_RECT="600 -1800 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15485"
+#! >
+#! <OUTPUT_FEAT NAME="MATCHED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="total_children_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="total_young_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_svyID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MATCHED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="filecode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="total_children_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="total_young_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="STRING_TO_SEARCH" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;filecode&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="MATCHED_RESULT_ATTR" PARM_VALUE="_svyID"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringSearcher"/>
+#! <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="^&lt;openparen&gt;&lt;backslash&gt;d+&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="MATCHED_PARTS_ATTR" PARM_VALUE="_matched_parts"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="FeatureMerger"
+#! VERSION="13"
+#! POSITION="2008.02 -1281.01"
+#! BOUNDING_RECT="2008.02 -1281.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15485"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <XFORM_ATTR ATTR_NAME="filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="total_children_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="total_young_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_svyID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="yrTo" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Electricity" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Electricity_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GDP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GDP_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Literacy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Literacy_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DPT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DPT_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country_DHSCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country_ISO3Code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="filecode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="total_children_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="total_young_RegionCount._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_full_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_any_treat_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="fever_occurrence_TotalProp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_svyID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_parts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="yrTo" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Electricity" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Electricity_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GDP" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GDP_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Literacy" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Literacy_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="DPT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="DPT_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Country_DHSCode" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Country_ISO3Code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="yrTo" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Electricity" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Electricity_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GDP" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GDP_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Literacy" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Literacy_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="DPT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="DPT_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Country_DHSCode" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Country_ISO3Code" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="yrTo" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Electricity" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Electricity_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GDP" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GDP_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GDPGrowth_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GDPpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GNIpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HealthExpercap_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HealthExPub_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HealthExTotal_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Literacy" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Literacy_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="PregWomenCare_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="PrimaryComplete_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="RuralPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="UrbanPop_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="CommHlthWrkrs_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="DPT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="DPT_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NurseMidwives_IndicatorYearUsed" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Country_DHSCode" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Country_ISO3Code" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Supplier"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Requestor"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MERGE_COUNT_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_svyID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;Survey_ID_num&lt;closeparen&gt; AUTO"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
+#! <XFORM_PARM PARM_NAME="IGNORE_NULLS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="Inspector"
+#! VERSION="3"
+#! POSITION="2562.02 -1299.51"
+#! BOUNDING_RECT="2562.02 -1299.51 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15485"
+#! >
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#! <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_Merged"/>
+#! <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#! <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="4"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="6"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="8"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="10"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="20"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_CSV_1,CSV_IN_NETWORK_AUTHENTICATION_CSV_1,_SKIP_LINES_CSV_1,_SKIP_FOOTER_CSV_1,_STRIP_QUOTES_CSV_1,_DUPLICATE_DELIMS_CSV_1,SORT_GROUP_CSV_1,_SORT_PARAMS_CSV_1,FILTER_GROUP_CSV_1,_FILTER_PARAMS_CSV_1,_ENCODING_CSV_1,SourceDataset_CSV_2,CSV_IN_NETWORK_AUTHENTICATION_CSV_2,_SKIP_LINES_CSV_2,_SKIP_FOOTER_CSV_2,_STRIP_QUOTES_CSV_2,_DUPLICATE_DELIMS_CSV_2,SORT_GROUP_CSV_2,_SORT_PARAMS_CSV_2,FILTER_GROUP_CSV_2,_FILTER_PARAMS_CSV_2,_ENCODING_CSV_2,DestDataset_CSV_3,CSV_OUT_EXTENSION_CSV_3,CSV_OUT_APPEND_CSV_3,CSV_OUT_FIELD_NAMES_CSV_3,CSV_OUT_SEPARATOR_CSV_3,CSV_OUT_ENCODING_CSV_3,CSV_OUT_WRITE_UTF8_BOM_CSV_3,CSV_OUT_QUOTE_OUTPUT_CSV_3,CSV_OUT_QUOTE_FIELD_NAMES_CSV_3,CSV_OUT_END_OF_LINE_CSV_3
+DEFAULT_MACRO SourceDataset_CSV \\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Indicators\SurveyIndicatorsAnyYr.csv
+GUI MULTIFILE SourceDataset_CSV CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+DEFAULT_MACRO SourceDataset_CSV_5 \\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Results\Weighting\National\NationalSurveyResults_Weighted.csv
+GUI MULTIFILE SourceDataset_CSV_5 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+DEFAULT_MACRO DestDataset_CSV \\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Results\Weighting\National
+GUI DIRNAME DestDataset_CSV Destination CSV (CommaSeparatedValue) Folder:
+INCLUDE [ if {{$(SourceDataset_CSV)} == {}} { puts_real {Parameter 'SourceDataset_CSV' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV_5)} == {}} { puts_real {Parameter 'SourceDataset_CSV_5' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_CSV)} == {}} { puts_real {Parameter 'DestDataset_CSV' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} CSV
+MULTI_READER_KEYWORD{0} CSV_1
+MULTI_READER_GEN_DIRECTIVES{0} _SKIP_LINES,1,_FIELD_NAMES_AFTER_HEADER,no,_SKIP_FOOTER,0,groupBox,,groupBox_2,,_STRIP_QUOTES,yes,_ENCODING,,groupBox_4,,_GROUP_BY_DATASET,yes,groupBox_5,,groupBox_6,,_IN_SEPARATOR,<comma>,_SCHEMA,char<comma>33<comma><comma>number<comma>4<comma>0<comma>number<comma>5<comma>0<comma>number<comma>10<comma>5<comma>number<comma>5<comma>0<comma>number<comma>31<comma>15<comma>number<comma>5<comma>0<comma>number<comma>12<comma>9<comma>number<comma>5<comma>0<comma>number<comma>13<comma>7<comma>number<comma>5<comma>0<comma>number<comma>6<comma>0<comma>number<comma>5<comma>0<comma>number<comma>13<comma>9<comma>number<comma>5<comma>0<comma>number<comma>12<comma>9<comma>number<comma>5<comma>0<comma>number<comma>12<comma>9<comma>number<comma>5<comma>0<comma>number<comma>12<comma>8<comma>number<comma>5<comma>0<comma>number<comma>5<comma>1<comma>number<comma>5<comma>0<comma>number<comma>12<comma>8<comma>number<comma>5<comma>0<comma>number<comma>6<comma>3<comma>number<comma>5<comma>0<comma>number<comma>6<comma>3<comma>number<comma>5<comma>0,_SORT_PARAMS,,_SCHEMA_WITH_COL_NAMES,Country<comma>char<comma>33<comma><comma>Survey_ID_num<comma>number<comma>4<comma>0<comma>yrTo<comma>number<comma>5<comma>0<comma>Electricity<comma>number<comma>10<comma>5<comma>Electricity_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>GDP<comma>number<comma>31<comma>15<comma>GDP_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>GDPGrowth<comma>number<comma>12<comma>9<comma>GDPGrowth_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>GDPpercap<comma>number<comma>13<comma>7<comma>GDPpercap_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>GNIpercap<comma>number<comma>6<comma>0<comma>GNIpercap_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>HealthExpercap<comma>number<comma>13<comma>9<comma>HealthExpercap_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>HealthExPub<comma>number<comma>12<comma>9<comma>HealthExPub_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>HealthExTotal<comma>number<comma>12<comma>9<comma>HealthExTotal_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>Literacy<comma>number<comma>12<comma>8<comma>Literacy_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>PregWomenCare<comma>number<comma>5<comma>1<comma>PregWomenCare_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>PrimaryComplete<comma>number<comma>12<comma>8<comma>PrimaryComplete_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>RuralPop<comma>number<comma>6<comma>3<comma>RuralPop_IndicatorYearUsed<comma>number<comma>5<comma>0<comma>UrbanPop<comma>number<comma>6<comma>3<comma>UrbanPop_IndicatorYearUsed<comma>number<comma>5<comma>0,_MERGE_SCHEMAS,YES,SCAN_MAX_FEATURES,1000,SORT_GROUP,NO,_FILTER_PARAMS,,FILTER_GROUP,NO,_ALLOW_SPACES_IN_COLUMN_NAMES,yes,_SORT_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Attribute<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>%<backslash><quote>%%<backslash><quote>Alpha<solidus>Num<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_CHOICE<space>Alphabetic<comma>alphabetic%Numeric<comma>numeric<backslash><quote>%alphabetic%<backslash><quote>Order<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_ORDER<space>Ascending<comma>ascending%Descending<comma>descending<backslash><quote>%ascending<quote>,_DUPLICATE_DELIMS,no,_IN_FIELD_NAMES,YES,_FILTER_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Field<space>Name<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>%<backslash><quote>%%<backslash><quote>Filter<backslash><quote>%<backslash><quote>STRING_ENCODED<space>_FILTER_REGEX<space><backslash><quote>%%<backslash><quote>Invert<space>Filter<backslash><quote>%<backslash><quote>CHECKBOX<space>_FILTER_UNMATCHED<space>yes%no<backslash><quote>%no<quote>
+MULTI_READER_TYPE{1} CSV
+MULTI_READER_KEYWORD{1} CSV_2
+MULTI_READER_GEN_DIRECTIVES{1} _SKIP_LINES,1,_FIELD_NAMES_AFTER_HEADER,no,_SKIP_FOOTER,0,groupBox,,groupBox_2,,_STRIP_QUOTES,yes,_ENCODING,,groupBox_4,,_GROUP_BY_DATASET,yes,groupBox_5,,groupBox_6,,_IN_SEPARATOR,<comma>,_SCHEMA,char<comma>11<comma><comma>number<comma>17<comma>12<comma>number<comma>17<comma>12<comma>number<comma>18<comma>12<comma>number<comma>18<comma>11<comma>number<comma>17<comma>11<comma>number<comma>19<comma>16<comma>number<comma>18<comma>15<comma>number<comma>18<comma>16,_SORT_PARAMS,,_SCHEMA_WITH_COL_NAMES,filecode<comma>char<comma>11<comma><comma>fever_any_treat_RegionCount._sum<comma>number<comma>17<comma>12<comma>fever_full_treat_RegionCount._sum<comma>number<comma>17<comma>12<comma>fever_occurrence_RegionCount._sum<comma>number<comma>18<comma>12<comma>total_children_RegionCount._sum<comma>number<comma>18<comma>11<comma>total_young_RegionCount._sum<comma>number<comma>17<comma>11<comma>fever_full_treat_TotalProp<comma>number<comma>19<comma>16<comma>fever_any_treat_TotalProp<comma>number<comma>18<comma>15<comma>fever_occurrence_TotalProp<comma>number<comma>18<comma>16,_MERGE_SCHEMAS,YES,SCAN_MAX_FEATURES,1000,SORT_GROUP,NO,_FILTER_PARAMS,,FILTER_GROUP,NO,_ALLOW_SPACES_IN_COLUMN_NAMES,yes,_SORT_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Attribute<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>filecode%fever_any_treat_RegionCount._sum%fever_full_treat_RegionCount._sum%fever_occurrence_RegionCount._sum%total_children_RegionCount._sum%total_young_RegionCount._sum%fever_full_treat_TotalProp%fever_any_treat_TotalProp%fever_occurrence_TotalProp<backslash><quote>%%<backslash><quote>Alpha<solidus>Num<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_CHOICE<space>Alphabetic<comma>alphabetic%Numeric<comma>numeric<backslash><quote>%alphabetic%<backslash><quote>Order<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_ORDER<space>Ascending<comma>ascending%Descending<comma>descending<backslash><quote>%ascending<quote>,_DUPLICATE_DELIMS,no,_IN_FIELD_NAMES,YES,_FILTER_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Field<space>Name<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>filecode%fever_any_treat_RegionCount._sum%fever_full_treat_RegionCount._sum%fever_occurrence_RegionCount._sum%total_children_RegionCount._sum%total_young_RegionCount._sum%fever_full_treat_TotalProp%fever_any_treat_TotalProp%fever_occurrence_TotalProp<backslash><quote>%%<backslash><quote>Filter<backslash><quote>%<backslash><quote>STRING_ENCODED<space>_FILTER_REGEX<space><backslash><quote>%%<backslash><quote>Invert<space>Filter<backslash><quote>%<backslash><quote>CHECKBOX<space>_FILTER_UNMATCHED<space>yes%no<backslash><quote>%no<quote>
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} CSV
+MULTI_WRITER_KEYWORD{0} CSV_3
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source of the CSV files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_1
+DEFAULT_MACRO SourceDataset_CSV_1 $(SourceDataset_CSV)
+GUI MULTIFILE SourceDataset_CSV_1 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+# ============================================================================
+# Hardcode the settings that were used to generate this mapping file
+#
+DEFAULT_MACRO _SCHEMA_CSV_1 char,33,,number,4,0,number,5,0,number,10,5,number,5,0,number,31,15,number,5,0,number,12,9,number,5,0,number,13,7,number,5,0,number,6,0,number,5,0,number,13,9,number,5,0,number,12,9,number,5,0,number,12,9,number,5,0,number,12,8,number,5,0,number,5,1,number,5,0,number,12,8,number,5,0,number,6,3,number,5,0,number,6,3,number,5,0
+DEFAULT_MACRO _IN_FIELD_NAMES_CSV_1 YES
+DEFAULT_MACRO _FIELD_NAMES_AFTER_HEADER_CSV_1 no
+DEFAULT_MACRO _EXTENSION_CSV_1 CSV
+DEFAULT_MACRO _ALLOW_SPACES_IN_COLUMN_NAMES_CSV_1 yes
+DEFAULT_MACRO _GROUP_BY_DATASET_CSV_1 yes
+CSV_1_SCHEMA char,33,,number,4,0,number,5,0,number,10,5,number,5,0,number,31,15,number,5,0,number,12,9,number,5,0,number,13,7,number,5,0,number,6,0,number,5,0,number,13,9,number,5,0,number,12,9,number,5,0,number,12,9,number,5,0,number,12,8,number,5,0,number,5,1,number,5,0,number,12,8,number,5,0,number,6,3,number,5,0,number,6,3,number,5,0
+DEFAULT_MACRO _SKIP_LINES_CSV_1 1
+CSV_1_SKIP_LINES $(_SKIP_LINES_CSV_1)
+DEFAULT_MACRO _SKIP_FOOTER_CSV_1 0
+CSV_1_SKIP_FOOTER $(_SKIP_FOOTER_CSV_1)
+CSV_1_FIELD_NAMES $(_IN_FIELD_NAMES_CSV_1)
+CSV_1_FIELD_NAMES_AFTER_HEADER $(_FIELD_NAMES_AFTER_HEADER_CSV_1)
+DEFAULT_MACRO _STRIP_QUOTES_CSV_1 yes
+CSV_1_STRIP_QUOTES $(_STRIP_QUOTES_CSV_1)
+CSV_1_SEPARATOR (",")
+CSV_1_EXTENSION CSV
+DEFAULT_MACRO _DUPLICATE_DELIMS_CSV_1 no
+CSV_1_DUPLICATE_DELIMS $(_DUPLICATE_DELIMS_CSV_1)
+CSV_1_SEQUENCED no
+CSV_1_ALLOW_SPACES_IN_COLUMN_NAMES $(_ALLOW_SPACES_IN_COLUMN_NAMES_CSV_1)
+CSV_1_GROUP_BY_DATASET $(_GROUP_BY_DATASET_CSV_1)
+DEFAULT_MACRO SORT_GROUP_CSV_1 NO
+CSV_1_SORT_GROUP $(SORT_GROUP_CSV_1)
+DEFAULT_MACRO _SORT_PARAMS_CSV_1 
+CSV_1_SORT_PARAMS $(_SORT_PARAMS_CSV_1)
+DEFAULT_MACRO FILTER_GROUP_CSV_1 NO
+CSV_1_FILTER_GROUP $(FILTER_GROUP_CSV_1)
+DEFAULT_MACRO _FILTER_PARAMS_CSV_1 
+CSV_1_FILTER_PARAMS $(_FILTER_PARAMS_CSV_1)
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or csv_.
+CSV_1_UNENCODED_ATTR_PREFIX fme_ csv_
+# ===========================================================================
+DEFAULT_MACRO CSV_IN_NETWORK_AUTHENTICATION_CSV_1 
+CSV_1_NETWORK_AUTHENTICATION "$(CSV_IN_NETWORK_AUTHENTICATION_CSV_1)"
+GUI OPTIONAL AUTHENTICATOR CSV_IN_NETWORK_AUTHENTICATION_CSV_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+GUI INTEGER _SKIP_LINES_CSV_1 Number of Lines to Skip:
+GUI INTEGER _SKIP_FOOTER_CSV_1 Number of Footer Lines to Skip:
+# GUI CHOICE _IN_FIELD_NAMES yes%no Field Names in File:
+# GUI CHOICE _FIELD_NAMES_AFTER_HEADER yes%no Field After Header:
+GUI CHOICE _STRIP_QUOTES_CSV_1 yes%no Strip Quotes From Fields:
+# GUI TEXT _IN_SEPARATOR Field Delimiter:
+# GUI TEXT _EXTENSION Default File Extension:
+GUI CHOICE _DUPLICATE_DELIMS_CSV_1 yes%no Skip Duplicate Delimiters:
+GUI CHOICE SORT_GROUP_CSV_1 yes%no Sorting Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _SORT_PARAMS_CSV_1 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Attribute"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES %"%%"Alpha/Num"%"LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric"%alphabetic%"Order"%"LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending"%ascending Sorting Parameters:
+GUI CHOICE FILTER_GROUP_CSV_1 yes%no Filter Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _FILTER_PARAMS_CSV_1 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Field Name"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES %"%%"Filter"%"STRING_ENCODED _FILTER_REGEX "%%"Invert Filter"%"CHECKBOX _FILTER_UNMATCHED yes%no"%no Filter Parameters:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO _ENCODING_CSV_1 
+GUI OPTIONAL STRING_OR_ENCODING _ENCODING_CSV_1 SYSTEM%* Character Encoding:
+CSV_1_ENCODING $(_ENCODING_CSV_1)
+CSV_1_DATASET "$(SourceDataset_CSV_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_2"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_2
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source of the CSV files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV_2 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_2
+DEFAULT_MACRO SourceDataset_CSV_2 $(SourceDataset_CSV_5)
+GUI MULTIFILE SourceDataset_CSV_2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+# ============================================================================
+# Hardcode the settings that were used to generate this mapping file
+#
+DEFAULT_MACRO _SCHEMA_CSV_2 char,11,,number,17,12,number,17,12,number,18,12,number,18,11,number,17,11,number,19,16,number,18,15,number,18,16
+DEFAULT_MACRO _IN_FIELD_NAMES_CSV_2 YES
+DEFAULT_MACRO _FIELD_NAMES_AFTER_HEADER_CSV_2 no
+DEFAULT_MACRO _EXTENSION_CSV_2 CSV
+DEFAULT_MACRO _ALLOW_SPACES_IN_COLUMN_NAMES_CSV_2 yes
+DEFAULT_MACRO _GROUP_BY_DATASET_CSV_2 yes
+CSV_2_SCHEMA char,11,,number,17,12,number,17,12,number,18,12,number,18,11,number,17,11,number,19,16,number,18,15,number,18,16
+DEFAULT_MACRO _SKIP_LINES_CSV_2 1
+CSV_2_SKIP_LINES $(_SKIP_LINES_CSV_2)
+DEFAULT_MACRO _SKIP_FOOTER_CSV_2 0
+CSV_2_SKIP_FOOTER $(_SKIP_FOOTER_CSV_2)
+CSV_2_FIELD_NAMES $(_IN_FIELD_NAMES_CSV_2)
+CSV_2_FIELD_NAMES_AFTER_HEADER $(_FIELD_NAMES_AFTER_HEADER_CSV_2)
+DEFAULT_MACRO _STRIP_QUOTES_CSV_2 yes
+CSV_2_STRIP_QUOTES $(_STRIP_QUOTES_CSV_2)
+CSV_2_SEPARATOR (",")
+CSV_2_EXTENSION CSV
+DEFAULT_MACRO _DUPLICATE_DELIMS_CSV_2 no
+CSV_2_DUPLICATE_DELIMS $(_DUPLICATE_DELIMS_CSV_2)
+CSV_2_SEQUENCED no
+CSV_2_ALLOW_SPACES_IN_COLUMN_NAMES $(_ALLOW_SPACES_IN_COLUMN_NAMES_CSV_2)
+CSV_2_GROUP_BY_DATASET $(_GROUP_BY_DATASET_CSV_2)
+DEFAULT_MACRO SORT_GROUP_CSV_2 NO
+CSV_2_SORT_GROUP $(SORT_GROUP_CSV_2)
+DEFAULT_MACRO _SORT_PARAMS_CSV_2 
+CSV_2_SORT_PARAMS $(_SORT_PARAMS_CSV_2)
+DEFAULT_MACRO FILTER_GROUP_CSV_2 NO
+CSV_2_FILTER_GROUP $(FILTER_GROUP_CSV_2)
+DEFAULT_MACRO _FILTER_PARAMS_CSV_2 
+CSV_2_FILTER_PARAMS $(_FILTER_PARAMS_CSV_2)
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or csv_.
+CSV_2_UNENCODED_ATTR_PREFIX fme_ csv_
+# ===========================================================================
+DEFAULT_MACRO CSV_IN_NETWORK_AUTHENTICATION_CSV_2 
+CSV_2_NETWORK_AUTHENTICATION "$(CSV_IN_NETWORK_AUTHENTICATION_CSV_2)"
+GUI OPTIONAL AUTHENTICATOR CSV_IN_NETWORK_AUTHENTICATION_CSV_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+GUI INTEGER _SKIP_LINES_CSV_2 Number of Lines to Skip:
+GUI INTEGER _SKIP_FOOTER_CSV_2 Number of Footer Lines to Skip:
+# GUI CHOICE _IN_FIELD_NAMES yes%no Field Names in File:
+# GUI CHOICE _FIELD_NAMES_AFTER_HEADER yes%no Field After Header:
+GUI CHOICE _STRIP_QUOTES_CSV_2 yes%no Strip Quotes From Fields:
+# GUI TEXT _IN_SEPARATOR Field Delimiter:
+# GUI TEXT _EXTENSION Default File Extension:
+GUI CHOICE _DUPLICATE_DELIMS_CSV_2 yes%no Skip Duplicate Delimiters:
+GUI CHOICE SORT_GROUP_CSV_2 yes%no Sorting Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _SORT_PARAMS_CSV_2 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Attribute"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES filecode%fever_any_treat_RegionCount._sum%fever_full_treat_RegionCount._sum%fever_occurrence_RegionCount._sum%total_children_RegionCount._sum%total_young_RegionCount._sum%fever_full_treat_TotalProp%fever_any_treat_TotalProp%fever_occurrence_TotalProp"%%"Alpha/Num"%"LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric"%alphabetic%"Order"%"LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending"%ascending Sorting Parameters:
+GUI CHOICE FILTER_GROUP_CSV_2 yes%no Filter Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _FILTER_PARAMS_CSV_2 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Field Name"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES filecode%fever_any_treat_RegionCount._sum%fever_full_treat_RegionCount._sum%fever_occurrence_RegionCount._sum%total_children_RegionCount._sum%total_young_RegionCount._sum%fever_full_treat_TotalProp%fever_any_treat_TotalProp%fever_occurrence_TotalProp"%%"Filter"%"STRING_ENCODED _FILTER_REGEX "%%"Invert Filter"%"CHECKBOX _FILTER_UNMATCHED yes%no"%no Filter Parameters:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO _ENCODING_CSV_2 
+GUI OPTIONAL STRING_OR_ENCODING _ENCODING_CSV_2 SYSTEM%* Character Encoding:
+CSV_2_ENCODING $(_ENCODING_CSV_2)
+CSV_2_DATASET "$(SourceDataset_CSV_2)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_3"
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_3
+# ============================================================================
+# The following GUI line prompts for a folder where the
+# CSV files will be stored
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_CSV_3 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_3
+DEFAULT_MACRO DestDataset_CSV_3 $(DestDataset_CSV)
+GUI DIRNAME DestDataset_CSV_3 Destination CSV (CommaSeparatedValue) Folder:
+CSV_3_PLUGIN_MAX_CHANNELS 100
+CSV_3_ALLOW_TYPE_TRUNCATION yes
+CSV_3_PERMISSIVE_TYPES yes
+# ============================================================================
+# The following determines the extension for output CSV files
+DEFAULT_MACRO CSV_OUT_EXTENSION_CSV_3 csv
+CSV_3_EXTENSION "$(CSV_OUT_EXTENSION_CSV_3)"
+GUI OPTIONAL TEXT CSV_OUT_EXTENSION_CSV_3 Extension:
+# =====================================================================
+# Allows one to append
+DEFAULT_MACRO CSV_OUT_APPEND_CSV_3 No
+CSV_3_APPEND "$(CSV_OUT_APPEND_CSV_3)"
+GUI CHECKBOX CSV_OUT_APPEND_CSV_3 Yes%No Append to File:
+# ============================================================================
+# The following determines whether field names will be written on
+# the first row of the file.
+DEFAULT_MACRO CSV_OUT_FIELD_NAMES_CSV_3 yes
+CSV_3_FIELD_NAMES "$(CSV_OUT_FIELD_NAMES_CSV_3)"
+GUI CHECKBOX CSV_OUT_FIELD_NAMES_CSV_3 yes%no Output Field Names on First Line:
+# ============================================================================
+# The following determines the field seperator
+# PR#19714 Changed GUI LOOKUP to STRING_OR_CHOICE for showing space and tab
+# as explicit delimiters for parsing issues and symmetry with the reader.
+DEFAULT_MACRO CSV_OUT_SEPARATOR_CSV_3 ,
+CSV_3_SEPARATOR "$(CSV_OUT_SEPARATOR_CSV_3)"
+GUI OPTIONAL STRING_OR_CHOICE CSV_OUT_SEPARATOR_CSV_3 ,%;%|%space%tab Separator Character:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO CSV_OUT_ENCODING_CSV_3 
+CSV_3_ENCODING "$(CSV_OUT_ENCODING_CSV_3)"
+GUI OPTIONAL STRING_OR_ENCODING CSV_OUT_ENCODING_CSV_3 SYSTEM%* Character Encoding:
+# =====================================================================
+# PR 15909
+# The following choice determines if the byte order mark should be written
+# when using UTF-8 encoding. By default BOM is written, so _WRITE_UTF8_BOM should be yes.
+DEFAULT_MACRO CSV_OUT_WRITE_UTF8_BOM_CSV_3 yes
+CSV_3_WRITE_UTF8_BOM "$(CSV_OUT_WRITE_UTF8_BOM_CSV_3)"
+GUI CHOICE CSV_OUT_WRITE_UTF8_BOM_CSV_3 yes%no Write UTF-8 Byte Order Mark
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO CSV_OUT_DESTINATION_DATASETTYPE_VALIDATION_CSV_3 Yes
+CSV_3_DESTINATION_DATASETTYPE_VALIDATION "$(CSV_OUT_DESTINATION_DATASETTYPE_VALIDATION_CSV_3)"
+# =====================================================================
+DEFAULT_MACRO CSV_OUT_QUOTE_OUTPUT_CSV_3 if_needed
+CSV_3_QUOTE_OUTPUT "$(CSV_OUT_QUOTE_OUTPUT_CSV_3)"
+GUI CHOICE CSV_OUT_QUOTE_OUTPUT_CSV_3 yes%if_needed%no Quote Output Values:
+DEFAULT_MACRO CSV_OUT_QUOTE_FIELD_NAMES_CSV_3 no
+CSV_3_QUOTE_FIELD_NAMES "$(CSV_OUT_QUOTE_FIELD_NAMES_CSV_3)"
+GUI CHOICE CSV_OUT_QUOTE_FIELD_NAMES_CSV_3 yes%no Quote Field Names:
+DEFAULT_MACRO CSV_OUT_END_OF_LINE_CSV_3 
+CSV_3_END_OF_LINE "$(CSV_OUT_END_OF_LINE_CSV_3)"
+GUI OPTIONAL CHOICE CSV_OUT_END_OF_LINE_CSV_3 Windows%Unix%Macintosh Line Termination:
+CSV_3_DATASET "$(DestDataset_CSV_3)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)Combine_National_Data_With_Indicators_Final_Output.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_CSV_1 CSV_1
+DEFAULT_MACRO DATASET_KEYWORD_CSV_2 CSV_2
+DEFAULT_MACRO DATASET_KEYWORD_CSV_3 CSV_3
+# -------------------------------------------------------------------------
+
+CSV_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+CSV_2_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME Combine_National_Data_With_Indicators_Final_Output
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+CSV_1_DEF SurveyIndicatorsAnyYr   Country                      char(33)   Survey_ID_num                number(4,0)   yrTo                         number(5,0)   Electricity                  number(10,5)   Electricity_IndicatorYearUsed number(5,0)   GDP                          number(31,15)   GDP_IndicatorYearUsed        number(5,0)   GDPGrowth                    number(12,9)   GDPGrowth_IndicatorYearUsed  number(5,0)   GDPpercap                    number(13,7)   GDPpercap_IndicatorYearUsed  number(5,0)   GNIpercap                    number(6,0)   GNIpercap_IndicatorYearUsed  number(5,0)   HealthExpercap               number(13,9)   HealthExpercap_IndicatorYearUsed number(5,0)   HealthExPub                  number(12,9)   HealthExPub_IndicatorYearUsed number(5,0)   HealthExTotal                number(12,9)   HealthExTotal_IndicatorYearUsed number(5,0)   Literacy                     number(12,8)   Literacy_IndicatorYearUsed   number(5,0)   PregWomenCare                number(5,1)   PregWomenCare_IndicatorYearUsed number(5,0)   PrimaryComplete              number(12,8)   PrimaryComplete_IndicatorYearUsed number(5,0)   RuralPop                     number(6,3)   RuralPop_IndicatorYearUsed   number(5,0)   UrbanPop                     number(6,3)   UrbanPop_IndicatorYearUsed   number(5,0)   CommHlthWrkrs                number(5,3)   CommHlthWrkrs_IndicatorYearUsed number(5,0)   DPT                          number(3,0)   DPT_IndicatorYearUsed        number(5,0)   NurseMidwives                number(6,3)   NurseMidwives_IndicatorYearUsed number(5,0)   Country_DHSCode              char(3)   Country_ISO3Code             char(4)
+# -------------------------------------------------------------------------
+CSV_2_DEF NationalSurveyResults_Weighted   filecode                     char(11)   fever_any_treat_RegionCount._sum number(17,12)   fever_full_treat_RegionCount._sum number(17,12)   fever_occurrence_RegionCount._sum number(18,12)   total_children_RegionCount._sum number(18,11)   total_young_RegionCount._sum number(17,11)   fever_full_treat_TotalProp   number(19,16)   fever_any_treat_TotalProp    number(18,15)   fever_occurrence_TotalProp   number(18,16)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE CSV CSV_1::SurveyIndicatorsAnyYr multi_reader_keyword,$(DATASET_KEYWORD_CSV_1) TO FME_GENERIC ::SurveyIndicatorsAnyYr ALIAS_GEOMETRY    ROUTE CSV CSV_2::NationalSurveyResults_Weighted multi_reader_keyword,$(DATASET_KEYWORD_CSV_2) TO FME_GENERIC ::NationalSurveyResults_Weighted ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+CSV_1_MERGE_DEF CSV_1::SurveyIndicatorsAnyYr EXACT SurveyIndicatorsAnyYr
+CSV_2_MERGE_DEF CSV_2::NationalSurveyResults_Weighted EXACT NationalSurveyResults_Weighted
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+MACRO casemac
+INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc StringSearcher_d72801ae_7d02_4b2a_96ef_616d67938a902_doGrep { stringToSearch regExp matchedChars matchedParts } {   set results [regexp -inline $(casemac) [FME_DecodeText $regExp]                  [FME_DecodeText $stringToSearch]];   set attrName $matchedChars;   set index 0;   foreach part $results {       FME_SetAttribute $attrName $part;       set attrName "$matchedParts{$index}";       incr index;   };   if {$index > 0} {       FME_UnsetAttributes $attrName;   };   return $index; }
+FACTORY_DEF * TestFactory    FACTORY_NAME StringSearcher    INPUT  FEATURE_TYPE NationalSurveyResults_Weighted    TEST @Tcl2("StringSearcher_d72801ae_7d02_4b2a_96ef_616d67938a902_doGrep {@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>filecode<closeparen>,StringSearcher)} {^<openparen><backslash>d+<closeparen>} {_svyID} {_matched_parts}") > 0    OUTPUT PASSED FEATURE_TYPE StringSearcher_MATCHED
+
+# -------------------------------------------------------------------------
+
+INCLUDE [if { {ATTRIBUTES} == {ATTRIBUTES} } {                puts "MACRO FeatureMerger_REFERENCE_INFO ATTRIBUTES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          else {}; ]
+
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger    INPUT REFERENCER FEATURE_TYPE StringSearcher_MATCHED    INPUT REFERENCEE FEATURE_TYPE SurveyIndicatorsAnyYr    REFERENCE_INFO $(FeatureMerger_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_svyID<closeparen>,FeatureMerger) @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>Survey_ID_num<closeparen>,FeatureMerger) AUTO    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "REQUESTOR_IF_CONFLICT"    IGNORE_NULLS "No"    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    REFERENCEES_FIRST No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_MERGED
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureMerger MERGED Splitter"   INPUT FEATURE_TYPE FeatureMerger_MERGED   OUTPUT FEATURE_TYPE FeatureMerger_MERGED_0_dtOzL5vgfW4=   OUTPUT FEATURE_TYPE FeatureMerger_MERGED_1_dtOzL5vgfW4=
+# -------------------------------------------------------------------------
+
+# Set the directive to add all the meta-attributes to the features.
+# We do this so users see all possible information in the viewed
+# features.
+
+READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [         set grpByAttrs {};         if { [string length $grpByAttrs] > 0 } {             if { [string first "@EvaluateExpression" $grpByAttrs] == 0 } {                 puts "MACRO CATMAC _$grpByAttrs" ;             } else {                set catter "" ;                set comma "" ;                foreach attr $grpByAttrs {                    set catter "$catter$comma@Value(\"$attr\")" ;                    set comma ",_," ;                } ;                puts "MACRO CATMAC _@Concatenate($catter)" ;             }         }         else {             puts "MACRO CATMAC " ;         };         set safeName "[regsub -all {[^a-zA-Z0-9]} {FeatureMerger_Merged} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";         puts "MACRO SAFE_FFS_NAME $safeName";         ]
+# Make the temporary directory that the FFS files will live in.
+FACTORY_DEF * CreationFactory      FACTORY_NAME FeatureMerger_Merged_DirCreator      OUTPUT FEATURE_TYPE __nukeme__          @Tcl2("catch {file mkdir {$(WORKSPACE_TEMP_DIR)}}")
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Merged_DirCreatorCleanerUpper    INPUT FEATURE_TYPE __nukeme__
+# Send raster, point cloud and vector features down different paths to prepare
+# them for viewing
+
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureMerger_Merged_FeatureDirector    INPUT  FEATURE_TYPE FeatureMerger_MERGED_0_dtOzL5vgfW4=    TEST &fme_type == "fme_raster"    OUTPUT FAILED FEATURE_TYPE FeatureMerger_Merged___NotRasterFeatures___    OUTPUT PASSED FEATURE_TYPE FeatureMerger_Merged___RasterFeatures___
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureMerger_Merged___FeatureDirector1    INPUT FEATURE_TYPE FeatureMerger_Merged___NotRasterFeatures___    TEST &fme_type == "fme_point_cloud"    OUTPUT FAILED FEATURE_TYPE FeatureMerger_Merged___VectorFeatures___    OUTPUT PASSED FEATURE_TYPE FeatureMerger_Merged___PointCloudFeatures___
+# Vector features simply may get their colors overridden
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Merged_VectorSetterUpper    INPUT FEATURE_TYPE FeatureMerger_Merged___VectorFeatures___    OUTPUT FEATURE_TYPE __viewme__
+# Point Cloud Features Might Need to be thinned
+
+# Note that we don't call the ThinPointCloud function directly, but rather
+# do it through TCL. This should allow this transformer to be used with a
+# Desktop license, even though ThinPointCloud requires Professional.
+
+Tcl2 proc FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_thinPointCloud {} {    if {[string equal {NO_THINNING} {KEEPNPOINT}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {MAXNUMPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {FIRSTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {LASTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Merged___PointCloudThinner    INPUT FEATURE_TYPE FeatureMerger_Merged___PointCloudFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_thinPointCloud")
+Tcl2 proc FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_prepareRaster {subsetStartRow subsetNumRows subsetStartCol subsetNumCols} {    set useDI [string equal -nocase {$(FME_VIEWER_APP)} {fmedatainspector}];    if {!$useDI} {       FME_Execute ApplyRasterRotation BILINEAR;    };    set doResample [string equal {NoReduction} {Resample}];    set doSubset [string equal {NoReduction} {Subset}];    set doBounds [string equal {NoReduction} {BoundingBoxOnly}];    if {$doBounds}  {       FME_Execute GeometryType fme_polygon;    }    elseif {$doResample || $doSubset} {       set comment {          First, we need to prefix all the attributes. This is done because          we are going to call @RasterProperties, and we want to make sure          it doesn't overwrite any existing attributes.       };       set kAttrPrefix ".";       set allNames [FME_AttributeNames];       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $newName $oldName;       };       FME_Execute RasterProperties RASTER;       if {$doResample} {          set oldNumCols [FME_GetAttribute _num_columns];          set oldNumRows [FME_GetAttribute _num_rows];          set oldSpacingX [FME_GetAttribute _spacing_x];          set oldSpacingY [FME_GetAttribute _spacing_y];          set kMinNumCells 32;          set kMaxNumCells 512;          set comment {             We will only resample if both dimensions are greater than the             minimum num cells, and at least one is greater than the maximum.          };          if {$oldNumRows > $kMinNumCells && $oldNumCols > $kMinNumCells && ($oldNumRows > $kMaxNumCells || $oldNumCols > $kMaxNumCells)} {             set newSpacingX 1.0;             set newSpacingY 1.0;             if {$oldNumRows > $oldNumCols} {                set comment {                   If we have more rows than columns, we need to choose a spacing                   that reduces the number of rows to the maximum we've chosen.                };                set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMaxNumCells];                set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                set comment {                   Now we need to check if doing this will result in the columns                   going below the minimum. If so, choose the spacing such that                   we only go down to the minimum (and not past).                };                set newNumCols [expr $oldNumCols * $oldSpacingX / $newSpacingX];                if {$newNumCols < $kMinNumCells}                {                   set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMinNumCells];                   set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                };             }             else {                set comment {                   This is identical to the above case, except the roles of                   rows and cols are reversed.                };                set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMaxNumCells];                set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                set newNumRows [expr $oldNumRows * $oldSpacingY / $newSpacingY];                if {$newNumRows < $kMinNumCells}                {                   set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMinNumCells];                   set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                };             };             FME_Execute ResampleRaster CELL_SIZE $newSpacingX $newSpacingY NearestNeighbor;          };       }       elseif {$doSubset} {          set comment {             Get the value of some strings that may be attributes or constants.             Note that we pass in the attribute prefix we're using, because if             one does turn out to be an attribute, it won't actually be the exact             name in the string (since we renamed all our attributes above).          };          set rasterNumRows [FME_GetAttribute _num_rows];          set rasterNumCols [FME_GetAttribute _num_columns];          set comment {             Only do subsetting if the specified start position is actually             within the raster.          };          if {$subsetStartRow < $rasterNumRows && $subsetStartCol < $rasterNumCols}          {             set comment {                Now bound the subset to the size of the raster, so that                we don't create padding.             };             if {[expr $subsetStartRow + $subsetNumRows] > $rasterNumRows}             {                set subsetNumRows [expr $rasterNumRows - $subsetStartRow];             };             if {[expr $subsetStartCol + $subsetNumCols] > $rasterNumCols}             {                set subsetNumCols [expr $rasterNumCols - $subsetStartCol];             };             FME_Execute SubsetRaster $subsetStartRow $subsetNumRows $subsetStartCol $subsetNumCols;          };       };       set comment {          Remove all the attributes added by @RasterProperties and remove the          prefix from the real attributes. We assume they all start with an          underscore.       };       FME_Execute RemoveAttributes fme_regexp_match {^_};       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $oldName $newName;       };    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Merged_RasterSetterUpper    INPUT FEATURE_TYPE FeatureMerger_Merged___RasterFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_prepareRaster {<Unused>} {<Unused>} {<Unused>} {<Unused>}")
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+# FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_VIS_FEAT_TYPE changes the feature types
+# of the features being visualized.
+
+DEFAULT_MACRO FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_VIS_FEAT_TYPE FeatureMerger_Merged$(CATMAC)
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME FeatureMerger_Merged_Recorder    INPUT FEATURE_TYPE __viewme__  _wb_termination_feature Yes @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__  @FeatureType($(FeatureMerger_Merged_110ac9ba_0794_4232_9c0b_1cb8c39847022_VIS_FEAT_TYPE))    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA filecode,varchar<openparen>255<closeparen>,fever_any_treat_RegionCount._sum,varchar<openparen>255<closeparen>,fever_full_treat_RegionCount._sum,varchar<openparen>255<closeparen>,fever_occurrence_RegionCount._sum,varchar<openparen>255<closeparen>,total_children_RegionCount._sum,varchar<openparen>255<closeparen>,total_young_RegionCount._sum,varchar<openparen>255<closeparen>,fever_full_treat_TotalProp,varchar<openparen>255<closeparen>,fever_any_treat_TotalProp,varchar<openparen>255<closeparen>,fever_occurrence_TotalProp,varchar<openparen>255<closeparen>,_svyID,varchar<openparen>255<closeparen>,Country,varchar<openparen>255<closeparen>,Survey_ID_num,varchar<openparen>255<closeparen>,yrTo,varchar<openparen>255<closeparen>,Electricity,varchar<openparen>255<closeparen>,Electricity_IndicatorYearUsed,varchar<openparen>255<closeparen>,GDP,varchar<openparen>255<closeparen>,GDP_IndicatorYearUsed,varchar<openparen>255<closeparen>,GDPGrowth,varchar<openparen>255<closeparen>,GDPGrowth_IndicatorYearUsed,varchar<openparen>255<closeparen>,GDPpercap,varchar<openparen>255<closeparen>,GDPpercap_IndicatorYearUsed,varchar<openparen>255<closeparen>,GNIpercap,varchar<openparen>255<closeparen>,GNIpercap_IndicatorYearUsed,varchar<openparen>255<closeparen>,HealthExpercap,varchar<openparen>255<closeparen>,HealthExpercap_IndicatorYearUsed,varchar<openparen>255<closeparen>,HealthExPub,varchar<openparen>255<closeparen>,HealthExPub_IndicatorYearUsed,varchar<openparen>255<closeparen>,HealthExTotal,varchar<openparen>255<closeparen>,HealthExTotal_IndicatorYearUsed,varchar<openparen>255<closeparen>,Literacy,varchar<openparen>255<closeparen>,Literacy_IndicatorYearUsed,varchar<openparen>255<closeparen>,PregWomenCare,varchar<openparen>255<closeparen>,PregWomenCare_IndicatorYearUsed,varchar<openparen>255<closeparen>,PrimaryComplete,varchar<openparen>255<closeparen>,PrimaryComplete_IndicatorYearUsed,varchar<openparen>255<closeparen>,RuralPop,varchar<openparen>255<closeparen>,RuralPop_IndicatorYearUsed,varchar<openparen>255<closeparen>,UrbanPop,varchar<openparen>255<closeparen>,UrbanPop_IndicatorYearUsed,varchar<openparen>255<closeparen>,CommHlthWrkrs,varchar<openparen>255<closeparen>,CommHlthWrkrs_IndicatorYearUsed,varchar<openparen>255<closeparen>,DPT,varchar<openparen>255<closeparen>,DPT_IndicatorYearUsed,varchar<openparen>255<closeparen>,NurseMidwives,varchar<openparen>255<closeparen>,NurseMidwives_IndicatorYearUsed,varchar<openparen>255<closeparen>,Country_DHSCode,varchar<openparen>255<closeparen>,Country_ISO3Code,varchar<openparen>255<closeparen>    MODE RECORD    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC FeatureMerger_MERGED_1_dtOzL5vgfW4= TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>national_fever_with_indicators_updated<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS $theFile & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; ")
+FACTORY_DEF * TeeFactory   INPUT FEATURE_TYPE __NUKEME__
+# -------------------------------------------------------------------------
+CSV_3_DEF national_fever_with_indicators_updated   csv_append_mode              INHERIT_FROM_WRITER   csv_field_names              INHERIT_FROM_WRITER   Country                      auto   Survey_ID_num                auto   Country_DHSCode              char(3)   Country_ISO3Code             char(4)   yrTo                         auto   filecode                     char(11)   fever_any_treat_RegionCount._sum auto   fever_full_treat_RegionCount._sum auto   fever_occurrence_RegionCount._sum auto   total_children_RegionCount._sum auto   total_young_RegionCount._sum auto   fever_full_treat_TotalProp   auto   fever_any_treat_TotalProp    auto   fever_occurrence_TotalProp   auto   Electricity                  auto   Electricity_IndicatorYearUsed auto   GDP                          auto   GDP_IndicatorYearUsed        auto   GDPGrowth                    auto   GDPGrowth_IndicatorYearUsed  auto   GDPpercap                    auto   GDPpercap_IndicatorYearUsed  auto   GNIpercap                    auto   GNIpercap_IndicatorYearUsed  auto   HealthExpercap               auto   HealthExpercap_IndicatorYearUsed auto   HealthExPub                  auto   HealthExPub_IndicatorYearUsed auto   HealthExTotal                auto   HealthExTotal_IndicatorYearUsed auto   Literacy                     auto   Literacy_IndicatorYearUsed   auto   PregWomenCare                auto   PregWomenCare_IndicatorYearUsed auto   PrimaryComplete              auto   PrimaryComplete_IndicatorYearUsed auto   RuralPop                     auto   RuralPop_IndicatorYearUsed   auto   UrbanPop                     auto   UrbanPop_IndicatorYearUsed   auto   CommHlthWrkrs                auto   CommHlthWrkrs_IndicatorYearUsed auto   DPT                          auto   DPT_IndicatorYearUsed        auto   NurseMidwives                auto   NurseMidwives_IndicatorYearUsed auto

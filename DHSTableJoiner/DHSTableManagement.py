@@ -21,7 +21,7 @@ def uniqList(input):
   return output
 
 class TableInfo:
-    """Represents information about a DB table and provides SQL to create it"""
+    """Represents information about a DB table and provides SQL to create it and update it"""
     def __init__(self, InputTableName, JoinColumns, OutputColumns):
         self._Name = InputTableName
 
@@ -102,7 +102,7 @@ class TableInfo:
 class TableToTableFieldCopier:
     """Provides functionality to copy fields from an input to an output table
 
-    It provides the necessary SQL to transfer data in various different ways.
+    It provides the necessary SQL, as a string, to transfer data in various different ways.
     Actually executing the SQL in a database is up to the caller.
 
     Both tables must already exist in the DB and be provided as TableInfo objects.
@@ -121,6 +121,8 @@ class TableToTableFieldCopier:
         """ Returns the expression part of a join clause for one pair of table/columns
 
         Allows for the special case of CASEID joining to a none-caseid column
+        for use with DHS or other CSPro format data, e.g. to produce a M:1 join between
+        a record for an individual (woman) and the parent record (household).
         """
         fmtSubStr = "substr({0}.{1}, 1, length({0}.{1})-3)"
         fmt = "{0} = {1}"
@@ -151,7 +153,7 @@ class TableToTableFieldCopier:
 
         For example
         'outputTable.IDX1 = inputTable.IDNum AND outputTable.IDX2 = inputTable.Ref'
-        The order of the join columns as provided as construction os the TableInfo
+        The order of the join columns as provided at construction of the TableInfo
         objects is used to infer which column should be joined to which.
         """
         myJoinCols = self._OutputTable.JoinColumns()
@@ -159,8 +161,8 @@ class TableToTableFieldCopier:
         # If we are joining to a table with fewer join fields then only use
         # the common number of fields
         # For example the output table may specify CASEID and BIDX and can
-        # join to a child table (1:M) on both of these, but can also join
-        # to a parent table (1:1) on only CASEID
+        # join to a child table (1:1) on both of these, but can also join
+        # to a parent table (M:1) on only CASEID
         # *** we assume the columns are in the matching order! ***
         if len(myJoinCols) <= len(otherJoinCols):
             otherJoinCols = otherJoinCols[0:len(myJoinCols)]

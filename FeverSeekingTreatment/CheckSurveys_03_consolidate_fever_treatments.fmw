@@ -1,0 +1,2246 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files\FME\fme.exe" \\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Code\consolidate_fever_treatments.fmw
+#          --DestDataset_CSV "C:\Users\zool1301\Documents\DHS\Scrape\Info"
+#          --SourceDataset_CSV_5 "C:\Users\zool1301\Documents\DHS\Scrape\Info\SurveysInEndemicCountries.csv"
+#          --SourceDataset_CSV_2 "\\129.67.26.176\map_data\DHS_Automation\Processing\FeverSeekingTreatment_201507\Code\Info\Merged H32 BM KB.csv"
+#    
+#    
+#! ZOOM_SCALE="100"
+#! PASSWORD=""
+#! DESTINATION_ROUTING_FILE=""
+#! TITLE=""
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! REQUIREMENTS=""
+#! IGNORE_READER_FAILURE="No"
+#! LAST_SAVE_DATE="2015-10-09T16:08:05"
+#! SHOW_INFO_NODES="true"
+#! DOC_EXTENTS="2550 1938.01"
+#! FME_DOCUMENT_GUID="11f8a684-fa06-4f85-a143-ffe0446aac94"
+#! BEGIN_PYTHON=""
+#! MAX_LOG_FEATURES="200"
+#! END_PYTHON=""
+#! FME_BUILD_NUM="15485"
+#! SOURCE="NONE"
+#! USAGE=""
+#! SHOW_ANNOTATIONS="true"
+#! VIEW_POSITION="-174.002 0"
+#! LOG_FILE=""
+#! CATEGORY=""
+#! LAST_SAVE_BUILD="FME(R) 2015.1.0.3 (20150623 - Build 15485 - WIN64)"
+#! BEGIN_TCL=""
+#! DOC_TOP_LEFT="150 -2046.01"
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! HISTORY=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! REQUIREMENTS_KEYWORD=""
+#! FME_SERVER_SERVICES=""
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! LEGAL_TERMS_CONDITIONS=""
+#! DESTINATION="NONE"
+#! FME_REPROJECTION_ENGINE="FME"
+#! LOG_MAX_PRECISION="Yes"
+#! WORKSPACE_VERSION="1"
+#! REDIRECT_TERMINATORS="NONE"
+#! FME_DOCUMENT_PRIORGUID="5a57931b-f3cc-4d8b-8bdb-465de4507627,6b6d2209-d486-4547-b644-349d96ed1568,532cb42c-0eb6-4d55-84e7-18cb1d987de7,2f732595-8be4-496e-8eb4-9cca6b4de3e3,91527923-14d8-4d21-92e9-def3d70ff0a9,7c2521c0-57a5-47bf-aa47-e54eb50f6539"
+#! DESCRIPTION=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! SOURCE_ROUTING_FILE=""
+#! END_TCL=""
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="CSV"
+#! DATASET="$(SourceDataset_CSV_5)"
+#! KEYWORD="CSV_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_rotation float csv_number_of_fields number(11,0) fme_text_string text fme_primary_axis float multi_reader_type text fme_fill_color text multi_reader_keyword text fme_dataset text fme_basename text multi_reader_id int csv_line_number number(11,0) fme_geometry fme_char(50) fme_feature_type text fme_start_angle float csv_type char(50) fme_type text csv_total_number_of_columns number(11,0) fme_secondary_axis float multi_reader_full_id int fme_sweep_angle float fme_text_size float fme_color text"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15479"
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="CSV"
+#! DATASET="$(SourceDataset_CSV_2)"
+#! KEYWORD="CSV_2"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_rotation float csv_number_of_fields number(11,0) fme_text_string text fme_primary_axis float multi_reader_type text fme_fill_color text multi_reader_keyword text fme_dataset text fme_basename text multi_reader_id int csv_line_number number(11,0) fme_geometry fme_char(50) fme_feature_type text fme_start_angle float csv_type char(50) fme_type text csv_total_number_of_columns number(11,0) fme_secondary_axis float multi_reader_full_id int fme_sweep_angle float fme_text_size float fme_color text"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15479"
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! MIN_FEATURES=""
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="CSV"
+#! DATASET="$(DestDataset_CSV)"
+#! KEYWORD="CSV_3"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="csv_append_mode INHERIT_FROM_WRITER csv_field_names INHERIT_FROM_WRITER"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_color text fme_secondary_axis float fme_primary_axis float fme_text_string text fme_feature_type text fme_fill_color text fme_type text fme_start_angle float fme_basename text fme_sweep_angle float csv_type char(50) fme_text_size float fme_geometry fme_char(50) fme_dataset text fme_rotation float"
+#! DEFLINE_PARMS="&quot;GUI OPTIONAL CHOICE csv_append_mode INHERIT_FROM_WRITER%yes%no Append to file&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL CHOICE csv_field_names INHERIT_FROM_WRITER%yes%no Output Field Names&quot; INHERIT_FROM_WRITER "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS="&quot;*{}$"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILEDIR"
+#! GENERATE_FME_BUILD_NUM="15250"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! FANOUT_SUFFIX=""
+#! FANOUT_DIRECTORY=""
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_FEATURE_TYPE_EDITING"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a folder for the CSV file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="_ENCODING CSV_OUT_ENCODING _WRITE_UTF8_BOM"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="text/csv ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_ATTR_TYPE"
+#! VALUE="auto"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="auto"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="x_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="y_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="z_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="auto"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="x_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="y_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="z_coordinate"
+#! FME_TYPE="fme_real64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="CSV"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="CSV"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_map"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="CSV"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="csv_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="CSV"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="MergedH32_AllEndemic"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="true"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="All"
+#! POSITION="2700 -1296.01"
+#! BOUNDING_RECT="2700 -1296.01 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="CSV_3"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="FileCode" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RecordName" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RecordTypeValue" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Label" ATTR_TYPE="char(62)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Start" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Len" ATTR_TYPE="number(3,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Occurrences" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FMETYPE" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CountAsTreatmentGuess" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Note" ATTR_TYPE="char(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="AnyTreatmentGuess" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Any_Treat" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OUTPUT_CountAsTreatmentSought" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="csv_append_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! <DEFLINE_PARM PARM_NAME="csv_field_names" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="SurveysInEndemicCountries"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="29"
+#! FEAT_GEOMTYPE="csv_none"
+#! POSITION="150 -996.007"
+#! BOUNDING_RECT="150 -996.007 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="CSV_1"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="FileCode" ATTR_TYPE="char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Country" ATTR_TYPE="char(26)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Year" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Survey_ID_num" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CountryCodeShort" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="Merged H32 BM KB"
+#! FEATURE_TYPE_NAME=""
+#! FEATURE_TYPE_NAME_QUALIFIER=""
+#! IS_EDITABLE="false"
+#! IDENTIFIER="33"
+#! FEAT_GEOMTYPE="csv_none"
+#! POSITION="695.999 -1821.01"
+#! BOUNDING_RECT="695.999 -1821.01 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="CSV_2"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="FileCode" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RecordName" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RecordTypeValue" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Label" ATTR_TYPE="char(63)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Start" ATTR_TYPE="number(4,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Len" ATTR_TYPE="number(2,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Occurrences" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FMETYPE" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CountAsTreatment_Initial" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BM_CountAsSeekedTreatment" ATTR_TYPE="char(162)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OUTPUT_CountAsTreatmentSought" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Note" ATTR_TYPE="char(73)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="Any_Treat" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DIRNAME DestDataset_CSV Destination CSV (CommaSeparatedValue) Folder:"
+#! DEFAULT_VALUE="C:\Users\zool1301\Documents\DHS\Scrape\Info"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_CSV_5 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):"
+#! DEFAULT_VALUE="C:\Users\zool1301\Documents\DHS\Scrape\Info\SurveysInEndemicCountries.csv"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_CSV_2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):"
+#! DEFAULT_VALUE="$(FME_MF_DIR)Info\Merged H32 BM KB.csv"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="43"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This workbench generates the H32 question-flagging table. It reads a CSV of all the surveys to be processed (Generated in step 2) and based on these reads the REC43 table of those surveys (the path in the FeatureReader will need amending to run on another PC).&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;It then outputs the identifier (e.g. H32A) and the label of each H32* question from each survey into a single collated file. This is then passed to an actual Scientist and they have to&lt;span style=&quot; font-weight:600;&quot;&gt; &lt;/span&gt;Do Some Work, by flagging in the output column whether the question, based on the text, should be interpreted as seeking &amp;quot;proper&amp;quot; treatment and / or &amp;quot;any&amp;quot; treatment. The workbench makes its own cute little guess based on whether the question mentions any key words like &amp;quot;hospital&amp;quot;, but that probably isn&apos;t very useful.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;It also reads in an earlier edition of the question-flagging table, and copies over the answers from that if they exist. This would come in useful if, for example, the Scientist decides after doing the Work once to identify &amp;quot;proper&amp;quot; treatment, that they also want to ask about &amp;quot;any&amp;quot; treatment, so that they don&apos;t have to flag all the &amp;quot;proper&amp;quot; treatment questions again.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The flagged output, when received back, will be used to run the actual data extraction workspace.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="150 -108"
+#! TOP_LEFT="150 -108"
+#! BOTTOM_RIGHT="1749.03 -786.006"
+#! BOUNDING_RECT="150 -108 1599.03 678.006"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.196078"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="Tester"
+#! VERSION="2"
+#! POSITION="150 -1979.02"
+#! BOUNDING_RECT="150 -1979.02 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15250"
+#! >
+#! <OUTPUT_FEAT NAME="PASSED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="FAILED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;Name&lt;closeparen&gt; BEGINS_WITH H32"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="TestFilter"
+#! VERSION="1"
+#! POSITION="1350 -935.003"
+#! BOUNDING_RECT="1350 -935.003 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="DefinitelyNo"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="ProbablyNo"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="ProbablyYes"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="DontKnow"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;no&lt;lt&gt;space&lt;gt&gt;treatment&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;BEGINS_WITH&lt;space&gt;na&lt;lt&gt;space&lt;gt&gt;-&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;ENDS_WITH&lt;space&gt;NA&lt;quote&gt;,DefinitelyNo,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;homeopathic&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;no&lt;lt&gt;space&lt;gt&gt;treatment&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;shop&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;market&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;traditional&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;friend&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;church&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;kiosk&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;religious&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;BEGINS_WITH&lt;space&gt;na&lt;lt&gt;space&lt;gt&gt;-&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;ENDS_WITH&lt;space&gt;NA&lt;quote&gt;,ProbablyNo,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;hospital&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;government&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;ngo&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;LowerCase&lt;lt&gt;openparen&lt;gt&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;Label&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;CONTAINS&lt;space&gt;welfare&lt;quote&gt;,ProbablyYes"/>
+#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="DontKnow"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2100 -996.007"
+#! BOUNDING_RECT="2100 -996.007 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="AnyTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="CountAsTreatmentGuess,No,AnyTreatmentGuess,?"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="11"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2055.51 -1146.01"
+#! BOUNDING_RECT="2055.51 -1146.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="AnyTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="CountAsTreatmentGuess,Yes,AnyTreatmentGuess,Yes"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="13"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2055.51 -1296.01"
+#! BOUNDING_RECT="2055.51 -1296.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="AnyTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="CountAsTreatmentGuess,?,AnyTreatmentGuess,?"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="23"
+#! TYPE="FeatureReader"
+#! VERSION="7"
+#! POSITION="150 -1350"
+#! BOUNDING_RECT="150 -1350 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="&lt;SCHEMA&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="attribute{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="attribute{}.fme_data_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="attribute{}.native_data_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_format_short_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_format_long_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="INITIATOR"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="_reader_error" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_PARM PARM_NAME="CSV__STRIP_QUOTES" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="CSV__GROUP_BY_DATASET" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="ATTRS_TO_EXPOSE" PARM_VALUE="Name Label RecordName RecordTypeValue Start Len Occurrences FMETYPE"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader"/>
+#! <XFORM_PARM PARM_NAME="CSV__SCHEMA_WITH_COL_NAMES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="CSV__ENCODING" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="CSV"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;parsedREC43path&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="CSV__SCHEMA" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MERGE_HANDLING_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#! <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#! <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="_FEATUREREADER_OPTIONAL_FTTR_"/>
+#! <XFORM_PARM PARM_NAME="PORTS_FROM_FTTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FTTR_SEPARATOR" PARM_VALUE="SPACE"/>
+#! <XFORM_PARM PARM_NAME="CSV_SCAN_MAX_FEATURES" PARM_VALUE="1000"/>
+#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="CSV__IN_FIELD_NAMES" PARM_VALUE="YES"/>
+#! <XFORM_PARM PARM_NAME="CONSTRAINTS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="CSV__IN_SEPARATOR" PARM_VALUE=","/>
+#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Use Result"/>
+#! <XFORM_PARM PARM_NAME="CSV__SKIP_LINES" PARM_VALUE="1"/>
+#! <XFORM_PARM PARM_NAME="CSV__SORT_TABLE_CONFIG" PARM_VALUE="&quot;NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%\&quot;Attribute\&quot;%\&quot;STRING_OR_CHOICE_ENCODED ATTRIBUTES %\&quot;%%\&quot;Alpha/Num\&quot;%\&quot;LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric\&quot;%alphabetic%\&quot;Order\&quot;%\&quot;LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending\&quot;%ascending&quot;"/>
+#! <XFORM_PARM PARM_NAME="CSV__FIELD_NAMES_AFTER_HEADER" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SINGLE_PORT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="CSV_groupBox,&quot;OPTIONAL DISCLOSUREGROUP _SKIP_LINES%_SKIP_FOOTER&quot;,CSV&lt;space&gt;Lines&lt;space&gt;to&lt;space&gt;Skip,CSV__STRIP_QUOTES,&quot;OPTIONAL CHECKBOX yes%no&quot;,CSV&lt;space&gt;Strip&lt;space&gt;Quotes,CSV__FIELD_NAMES_AFTER_HEADER,&quot;OPTIONAL CHECKBOX yes%no&quot;,CSV&lt;space&gt;Field&lt;space&gt;Names&lt;space&gt;Follow&lt;space&gt;Header,CSV_groupBox_2,&quot;OPTIONAL DISCLOSUREGROUP FME_DISCLOSURE_OPEN%_IN_SEPARATOR%_DUPLICATE_DELIMS%_STRIP_QUOTES&quot;,CSV&lt;space&gt;Field&lt;space&gt;Separation,CSV__DUPLICATE_DELIMS,&quot;OPTIONAL CHECKBOX yes%no&quot;,CSV&lt;space&gt;Remove&lt;space&gt;Duplicate&lt;space&gt;Separators,CSV__SKIP_LINES,&quot;OPTIONAL RANGE_SLIDER 0%MAX%0&quot;,CSV&lt;space&gt;Header:,CSV_groupBox_4,&quot;OPTIONAL DISCLOSUREGROUP FME_DISCLOSURE_OPEN%_GROUP_BY_DATASET&quot;,CSV&lt;space&gt;Dataset&lt;space&gt;Parameters,CSV__IN_FIELD_NAMES,&quot;OPTIONAL ACTIVEDISCLOSUREGROUP _FIELD_NAMES_AFTER_HEADER&quot;,CSV&lt;space&gt;File&lt;space&gt;Has&lt;space&gt;Field&lt;space&gt;Names,CSV_groupBox_5,&quot;OPTIONAL DISCLOSUREGROUP SCAN_MAX_FEATURES&quot;,CSV&lt;space&gt;Schema&lt;space&gt;Generation,CSV_groupBox_6,&quot;OPTIONAL DISCLOSUREGROUP _ENCODING&quot;,CSV&lt;space&gt;Encoding,CSV_FILTER_GROUP,&quot;OPTIONAL ACTIVEDISCLOSUREGROUP _FILTER_PARAMS&quot;,CSV&lt;space&gt;Filter&lt;space&gt;by&lt;space&gt;Field&lt;space&gt;Value,CSV__IN_SEPARATOR,&quot;OPTIONAL STRING_OR_CHOICE ,%;%|%space%tab&quot;,CSV&lt;space&gt;Separator&lt;space&gt;Character:,CSV__GROUP_BY_DATASET,&quot;OPTIONAL LOOKUP_CHOICE &quot;&quot;Feature Type from Format Name,no&quot;&quot;%&quot;&quot;Feature Type from File Name(s),yes&quot;&quot;&quot;,CSV&lt;space&gt;Feature&lt;space&gt;Type&lt;space&gt;Name&lt;openparen&gt;s&lt;closeparen&gt;:,CSV__SCHEMA,&quot;OPTIONAL TEXT&quot;,CSV&lt;space&gt;Schema,CSV__SKIP_FOOTER,&quot;OPTIONAL INTEGER&quot;,CSV&lt;space&gt;Footer:,CSV__SORT_TABLE_CONFIG,&quot;OPTIONAL TEXT&quot;,CSV&lt;space&gt;SortTable,CSV__ALLOW_SPACES_IN_COLUMN_NAMES,&quot;IGNORE TEXT&quot;,CSV&lt;space&gt;,CSV_SORT_GROUP,&quot;OPTIONAL ACTIVEDISCLOSUREGROUP _SORT_PARAMS&quot;,CSV&lt;space&gt;Sort,CSV__SCHEMA_WITH_COL_NAMES,&quot;OPTIONAL TEXT&quot;,CSV&lt;space&gt;Schema&lt;space&gt;with&lt;space&gt;column&lt;space&gt;names,CSV__FILTER_TABLE_CONFIG,&quot;OPTIONAL TEXT&quot;,CSV&lt;space&gt;FilterTable,CSV_SCAN_MAX_FEATURES,&quot;OPTIONAL TEXT&quot;,CSV&lt;space&gt;Maximum&lt;space&gt;Lines&lt;space&gt;to&lt;space&gt;Scan&lt;space&gt;&lt;openparen&gt;0&lt;space&gt;for&lt;space&gt;no&lt;space&gt;limit&lt;closeparen&gt;:,CSV__ENCODING,&quot;OPTIONAL STRING_OR_ENCODING SYSTEM%*&quot;,CSV&lt;space&gt;Character&lt;space&gt;Encoding:"/>
+#! <XFORM_PARM PARM_NAME="CSV_groupBox" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES_RADIO" PARM_VALUE="FEATURETYPES"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="SINGLE_PORT"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CSV_FILTER_GROUP" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CSV__ALLOW_SPACES_IN_COLUMN_NAMES" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="CSV_groupBox_2" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="OUTPUT_FEATURES_DISPLAY" PARM_VALUE="Based on Connections"/>
+#! <XFORM_PARM PARM_NAME="CSV_groupBox_4" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CSV_groupBox_5" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CSV__DUPLICATE_DELIMS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="CSV_groupBox_6" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Result"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="META_MACROS,SourcegroupBox&lt;comma&gt;&lt;comma&gt;Source_STRIP_QUOTES&lt;comma&gt;yes&lt;comma&gt;Source_FIELD_NAMES_AFTER_HEADER&lt;comma&gt;no&lt;comma&gt;SourcegroupBox_2&lt;comma&gt;&lt;comma&gt;Source_DUPLICATE_DELIMS&lt;comma&gt;no&lt;comma&gt;Source_SKIP_LINES&lt;comma&gt;1&lt;comma&gt;SourcegroupBox_4&lt;comma&gt;&lt;comma&gt;Source_IN_FIELD_NAMES&lt;comma&gt;YES&lt;comma&gt;SourcegroupBox_5&lt;comma&gt;&lt;comma&gt;SourcegroupBox_6&lt;comma&gt;&lt;comma&gt;SourceFILTER_GROUP&lt;comma&gt;NO&lt;comma&gt;Source_IN_SEPARATOR&lt;comma&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;&lt;comma&gt;Source_GROUP_BY_DATASET&lt;comma&gt;no&lt;comma&gt;Source_SCHEMA&lt;comma&gt;&lt;comma&gt;Source_SKIP_FOOTER&lt;comma&gt;0&lt;comma&gt;Source_SORT_TABLE_CONFIG&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:&lt;semicolon&gt;%COL_DELIM:&lt;comma&gt;%HAS_DEFAULTS%START_NUM_ROWS:3%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;Attribute&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;STRING_OR_CHOICE_ENCODED&lt;space&gt;ATTRIBUTES&lt;space&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;Alpha&lt;solidus&gt;Num&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;LOOKUP_CHOICE&lt;space&gt;SORT_CHOICE&lt;space&gt;Alphabetic&lt;comma&gt;alphabetic%Numeric&lt;comma&gt;numeric&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%alphabetic%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;Order&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;LOOKUP_CHOICE&lt;space&gt;SORT_ORDER&lt;space&gt;Ascending&lt;comma&gt;ascending%Descending&lt;comma&gt;descending&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%ascending&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;Source_ALLOW_SPACES_IN_COLUMN_NAMES&lt;comma&gt;yes&lt;comma&gt;SourceSORT_GROUP&lt;comma&gt;NO&lt;comma&gt;Source_SCHEMA_WITH_COL_NAMES&lt;comma&gt;&lt;comma&gt;Source_FILTER_TABLE_CONFIG&lt;comma&gt;&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:&lt;semicolon&gt;%COL_DELIM:&lt;comma&gt;%HAS_DEFAULTS%START_NUM_ROWS:3%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;Field&lt;space&gt;Name&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;STRING_OR_CHOICE_ENCODED&lt;space&gt;ATTRIBUTES&lt;space&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;Filter&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;STRING_ENCODED&lt;space&gt;_FILTER_REGEX&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;Invert&lt;space&gt;Filter&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;CHECKBOX&lt;space&gt;_FILTER_UNMATCHED&lt;space&gt;yes%no&lt;backslash&gt;&lt;quote&gt;&lt;quote&gt;%no&lt;quote&gt;&lt;quote&gt;&lt;quote&gt;&lt;comma&gt;SourceSCAN_MAX_FEATURES&lt;comma&gt;1000&lt;comma&gt;Source_ENCODING&lt;comma&gt;&lt;comma&gt;SourceSTRIP_QUOTES&lt;comma&gt;yes&lt;comma&gt;SourceDUPLICATE_DELIMS&lt;comma&gt;no&lt;comma&gt;SourceSKIP_LINES&lt;comma&gt;1&lt;comma&gt;SourceFIELD_NAMES&lt;comma&gt;YES,METAFILE,CSV"/>
+#! <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CSV_SORT_GROUP" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Initiator and Result"/>
+#! <XFORM_PARM PARM_NAME="CSV__FILTER_TABLE_CONFIG" PARM_VALUE="&quot;NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%\&quot;Field Name\&quot;%\&quot;STRING_OR_CHOICE_ENCODED ATTRIBUTES %\&quot;%%\&quot;Filter\&quot;%\&quot;STRING_ENCODED _FILTER_REGEX \&quot;%%\&quot;Invert Filter\&quot;%\&quot;CHECKBOX _FILTER_UNMATCHED yes%no\&quot;%no&quot;"/>
+#! <XFORM_PARM PARM_NAME="CSV__SKIP_FOOTER" PARM_VALUE="0"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="30"
+#! TYPE="AttributeCreator"
+#! VERSION="7"
+#! POSITION="150 -1146.01"
+#! BOUNDING_RECT="150 -1146.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="parsedREC43path,C:&lt;backslash&gt;Users&lt;backslash&gt;zool1301&lt;backslash&gt;Documents&lt;backslash&gt;DHS&lt;backslash&gt;Scrape&lt;backslash&gt;ParsedSpecs&lt;backslash&gt;&lt;at&gt;Value&lt;openparen&gt;FileCode&lt;closeparen&gt;.FlatRecordSpec.csv"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="21"
+#! TYPE="StringSearcher"
+#! VERSION="2"
+#! POSITION="690.002 -1340.51"
+#! BOUNDING_RECT="690.002 -1340.51 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="MATCHED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MATCHED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="MATCHED_PARTS_ATTR" PARM_VALUE="_old_filecode"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MATCHED_RESULT_ATTR" PARM_VALUE="_matched_characters"/>
+#! <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="^&lt;backslash&gt;d+&lt;backslash&gt;.&lt;openparen&gt;&lt;backslash&gt;w+&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="STRING_TO_SEARCH" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FileCode&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringSearcher"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="25"
+#! TYPE="ListIndexer"
+#! VERSION="2"
+#! POSITION="709.997 -1644.01"
+#! BOUNDING_RECT="709.997 -1644.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="INDEX" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ListIndexer"/>
+#! <XFORM_PARM PARM_NAME="LIST_ATTR" PARM_VALUE="_old_filecode{}"/>
+#! <XFORM_PARM PARM_NAME="PREFIX" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="27"
+#! TYPE="FeatureMerger"
+#! VERSION="13"
+#! POSITION="1225 -1596.01"
+#! BOUNDING_RECT="1225 -1596.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatment_Initial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BM_CountAsSeekedTreatment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OUTPUT_CountAsTreatmentSought" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Note" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Any_Treat" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatment_Initial" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="BM_CountAsSeekedTreatment" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OUTPUT_CountAsTreatmentSought" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Note" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="Any_Treat" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatment_Initial" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="BM_CountAsSeekedTreatment" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OUTPUT_CountAsTreatmentSought" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Note" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="Any_Treat" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatment_Initial" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="BM_CountAsSeekedTreatment" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OUTPUT_CountAsTreatmentSought" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Note" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="Any_Treat" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_old_filecode&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FileCode&lt;closeparen&gt; AUTO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Requestor"/>
+#! <XFORM_PARM PARM_NAME="IGNORE_NULLS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_COUNT_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Supplier"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="37"
+#! TYPE="Inspector"
+#! VERSION="3"
+#! POSITION="1800 -2046.01"
+#! BOUNDING_RECT="1800 -2046.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_Unreferenced"/>
+#! <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="39"
+#! TYPE="Inspector"
+#! VERSION="3"
+#! POSITION="1800 -1896.01"
+#! BOUNDING_RECT="1800 -1896.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="No Thinning"/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_ROW" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TACKATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_COLS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PEN_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_VISUALIZATION_OPTION" PARM_VALUE="No Reduction"/>
+#! <XFORM_PARM PARM_NAME="RASTER_NUM_ROWS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_START_COL" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="THINNER_MAX_NUM_POINTS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_NotMerged"/>
+#! <XFORM_PARM PARM_NAME="VECTOR_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AREA_COLOR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="POINTCLOUD_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="41"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="2100 -846.007"
+#! BOUNDING_RECT="2100 -846.007 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15479"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FileCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Country" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Year" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Survey_ID_num" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountryCodeShort" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="parsedREC43path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Label" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RecordTypeValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Start" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Len" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="Occurrences" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FMETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_characters" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_old_filecode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CountAsTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="AnyTreatmentGuess" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="CountAsTreatmentGuess,No,AnyTreatmentGuess,No"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_4"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="10"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="8"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="12"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="14"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="13"
+#! SOURCE_PORT_DESC="fo 3"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="15"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="31"
+#! SOURCE_NODE="29"
+#! TARGET_NODE="30"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="32"
+#! SOURCE_NODE="30"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="23"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="21"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="28"
+#! SOURCE_NODE="25"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="34"
+#! SOURCE_NODE="33"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="35"
+#! SOURCE_NODE="27"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="36"
+#! SOURCE_NODE="27"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="38"
+#! SOURCE_NODE="27"
+#! TARGET_NODE="37"
+#! SOURCE_PORT_DESC="fo 3"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="40"
+#! SOURCE_NODE="27"
+#! TARGET_NODE="39"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="42"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="41"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_CSV_1,CSV_IN_NETWORK_AUTHENTICATION_CSV_1,_SKIP_LINES_CSV_1,_SKIP_FOOTER_CSV_1,_STRIP_QUOTES_CSV_1,_DUPLICATE_DELIMS_CSV_1,SORT_GROUP_CSV_1,_SORT_PARAMS_CSV_1,FILTER_GROUP_CSV_1,_FILTER_PARAMS_CSV_1,_ENCODING_CSV_1,CSV_IN_NETWORK_AUTHENTICATION_CSV_2,_SKIP_LINES_CSV_2,_SKIP_FOOTER_CSV_2,_STRIP_QUOTES_CSV_2,_DUPLICATE_DELIMS_CSV_2,SORT_GROUP_CSV_2,_SORT_PARAMS_CSV_2,FILTER_GROUP_CSV_2,_FILTER_PARAMS_CSV_2,_ENCODING_CSV_2,DestDataset_CSV_3,CSV_OUT_EXTENSION_CSV_3,CSV_OUT_APPEND_CSV_3,CSV_OUT_FIELD_NAMES_CSV_3,CSV_OUT_SEPARATOR_CSV_3,CSV_OUT_ENCODING_CSV_3,_OUT_QUOTE_OUTPUT_CSV_3,_QUOTE_FIELD_NAMES_CSV_3,CSV_OUT_END_OF_LINE_CSV_3,_WRITE_UTF8_BOM_CSV_3
+DEFAULT_MACRO DestDataset_CSV C:\Users\zool1301\Documents\DHS\Scrape\Info
+GUI DIRNAME DestDataset_CSV Destination CSV (CommaSeparatedValue) Folder:
+DEFAULT_MACRO SourceDataset_CSV_5 C:\Users\zool1301\Documents\DHS\Scrape\Info\SurveysInEndemicCountries.csv
+GUI MULTIFILE SourceDataset_CSV_5 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+DEFAULT_MACRO SourceDataset_CSV_2 $(FME_MF_DIR)Info\Merged H32 BM KB.csv
+GUI MULTIFILE SourceDataset_CSV_2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+INCLUDE [ if {{$(DestDataset_CSV)} == {}} { puts_real {Parameter 'DestDataset_CSV' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV_5)} == {}} { puts_real {Parameter 'SourceDataset_CSV_5' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV_2)} == {}} { puts_real {Parameter 'SourceDataset_CSV_2' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} CSV
+MULTI_READER_KEYWORD{0} CSV_1
+MULTI_READER_GEN_DIRECTIVES{0} groupBox,,_SORT_PARAMS,,_STRIP_QUOTES,yes,_FIELD_NAMES_AFTER_HEADER,no,groupBox_2,,_DUPLICATE_DELIMS,no,_SKIP_LINES,1,groupBox_4,,_IN_FIELD_NAMES,YES,groupBox_5,,groupBox_6,,FILTER_GROUP,NO,_MERGE_SCHEMAS,YES,_IN_SEPARATOR,<comma>,_GROUP_BY_DATASET,yes,_SCHEMA,char<comma>11<comma><comma>char<comma>26<comma><comma>char<comma>8<comma><comma>number<comma>4<comma>0<comma>char<comma>3<comma>,_SKIP_FOOTER,0,_SORT_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Attribute<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>FileCode%Country%Year%Survey_ID_num%CountryCodeShort<backslash><quote>%%<backslash><quote>Alpha<solidus>Num<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_CHOICE<space>Alphabetic<comma>alphabetic%Numeric<comma>numeric<backslash><quote>%alphabetic%<backslash><quote>Order<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_ORDER<space>Ascending<comma>ascending%Descending<comma>descending<backslash><quote>%ascending<quote>,_FILTER_PARAMS,,_ALLOW_SPACES_IN_COLUMN_NAMES,yes,SORT_GROUP,NO,_SCHEMA_WITH_COL_NAMES,FileCode<comma>char<comma>11<comma><comma>Country<comma>char<comma>26<comma><comma>Year<comma>char<comma>8<comma><comma>Survey_ID_num<comma>number<comma>4<comma>0<comma>CountryCodeShort<comma>char<comma>3<comma>,_FILTER_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Field<space>Name<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>FileCode%Country%Year%Survey_ID_num%CountryCodeShort<backslash><quote>%%<backslash><quote>Filter<backslash><quote>%<backslash><quote>STRING_ENCODED<space>_FILTER_REGEX<space><backslash><quote>%%<backslash><quote>Invert<space>Filter<backslash><quote>%<backslash><quote>CHECKBOX<space>_FILTER_UNMATCHED<space>yes%no<backslash><quote>%no<quote>,SCAN_MAX_FEATURES,1000,_ENCODING,
+MULTI_READER_TYPE{1} CSV
+MULTI_READER_KEYWORD{1} CSV_2
+MULTI_READER_GEN_DIRECTIVES{1} groupBox,,_SORT_PARAMS,,_STRIP_QUOTES,yes,_FIELD_NAMES_AFTER_HEADER,no,groupBox_2,,_DUPLICATE_DELIMS,no,_SKIP_LINES,1,groupBox_4,,_IN_FIELD_NAMES,YES,groupBox_5,,groupBox_6,,FILTER_GROUP,NO,_MERGE_SCHEMAS,YES,_IN_SEPARATOR,<comma>,_GROUP_BY_DATASET,yes,_SCHEMA,char<comma>7<comma><comma>char<comma>6<comma><comma>char<comma>4<comma><comma>char<comma>5<comma><comma>char<comma>63<comma><comma>number<comma>4<comma>0<comma>number<comma>2<comma>0<comma>char<comma>1<comma><comma>char<comma>12<comma><comma>char<comma>4<comma><comma>char<comma>162<comma><comma>char<comma>2<comma><comma>char<comma>73<comma><comma>char<comma>2<comma>,_SKIP_FOOTER,0,_SORT_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Attribute<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>FileCode%RecordName%RecordTypeValue%Name%Label%Start%Len%Occurrences%FMETYPE%CountAsTreatment_Initial%BM_CountAsSeekedTreatment%OUTPUT_CountAsTreatmentSought%Note%Any_Treat<backslash><quote>%%<backslash><quote>Alpha<solidus>Num<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_CHOICE<space>Alphabetic<comma>alphabetic%Numeric<comma>numeric<backslash><quote>%alphabetic%<backslash><quote>Order<backslash><quote>%<backslash><quote>LOOKUP_CHOICE<space>SORT_ORDER<space>Ascending<comma>ascending%Descending<comma>descending<backslash><quote>%ascending<quote>,_FILTER_PARAMS,,_ALLOW_SPACES_IN_COLUMN_NAMES,yes,SORT_GROUP,NO,_SCHEMA_WITH_COL_NAMES,FileCode<comma>char<comma>7<comma><comma>RecordName<comma>char<comma>6<comma><comma>RecordTypeValue<comma>char<comma>4<comma><comma>Name<comma>char<comma>5<comma><comma>Label<comma>char<comma>63<comma><comma>Start<comma>number<comma>4<comma>0<comma>Len<comma>number<comma>2<comma>0<comma>Occurrences<comma>char<comma>1<comma><comma>FMETYPE<comma>char<comma>12<comma><comma>CountAsTreatment_Initial<comma>char<comma>4<comma><comma>BM_CountAsSeekedTreatment<comma>char<comma>162<comma><comma>OUTPUT_CountAsTreatmentSought<comma>char<comma>2<comma><comma>Note<comma>char<comma>73<comma><comma>Any_Treat<comma>char<comma>2<comma>,_FILTER_TABLE_CONFIG,<quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote>Field<space>Name<backslash><quote>%<backslash><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>FileCode%RecordName%RecordTypeValue%Name%Label%Start%Len%Occurrences%FMETYPE%CountAsTreatment_Initial%BM_CountAsSeekedTreatment%OUTPUT_CountAsTreatmentSought%Note%Any_Treat<backslash><quote>%%<backslash><quote>Filter<backslash><quote>%<backslash><quote>STRING_ENCODED<space>_FILTER_REGEX<space><backslash><quote>%%<backslash><quote>Invert<space>Filter<backslash><quote>%<backslash><quote>CHECKBOX<space>_FILTER_UNMATCHED<space>yes%no<backslash><quote>%no<quote>,SCAN_MAX_FEATURES,1000,_ENCODING,
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} CSV
+MULTI_WRITER_KEYWORD{0} CSV_3
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source of the CSV files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_1
+DEFAULT_MACRO SourceDataset_CSV_1 $(SourceDataset_CSV_5)
+GUI MULTIFILE SourceDataset_CSV_1 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+# ============================================================================
+# Hardcode the settings that were used to generate this mapping file
+#
+DEFAULT_MACRO _SCHEMA_CSV_1 char,11,,char,26,,char,8,,number,4,0,char,3,
+DEFAULT_MACRO _IN_FIELD_NAMES_CSV_1 YES
+DEFAULT_MACRO _FIELD_NAMES_AFTER_HEADER_CSV_1 no
+DEFAULT_MACRO _EXTENSION_CSV_1 CSV
+DEFAULT_MACRO _ALLOW_SPACES_IN_COLUMN_NAMES_CSV_1 yes
+DEFAULT_MACRO _GROUP_BY_DATASET_CSV_1 yes
+CSV_1_SCHEMA char,11,,char,26,,char,8,,number,4,0,char,3,
+DEFAULT_MACRO _SKIP_LINES_CSV_1 1
+CSV_1_SKIP_LINES $(_SKIP_LINES_CSV_1)
+DEFAULT_MACRO _SKIP_FOOTER_CSV_1 0
+CSV_1_SKIP_FOOTER $(_SKIP_FOOTER_CSV_1)
+CSV_1_FIELD_NAMES $(_IN_FIELD_NAMES_CSV_1)
+CSV_1_FIELD_NAMES_AFTER_HEADER $(_FIELD_NAMES_AFTER_HEADER_CSV_1)
+DEFAULT_MACRO _STRIP_QUOTES_CSV_1 yes
+CSV_1_STRIP_QUOTES $(_STRIP_QUOTES_CSV_1)
+CSV_1_SEPARATOR (",")
+CSV_1_EXTENSION CSV
+DEFAULT_MACRO _DUPLICATE_DELIMS_CSV_1 no
+CSV_1_DUPLICATE_DELIMS $(_DUPLICATE_DELIMS_CSV_1)
+CSV_1_SEQUENCED no
+CSV_1_ALLOW_SPACES_IN_COLUMN_NAMES $(_ALLOW_SPACES_IN_COLUMN_NAMES_CSV_1)
+CSV_1_GROUP_BY_DATASET $(_GROUP_BY_DATASET_CSV_1)
+DEFAULT_MACRO SORT_GROUP_CSV_1 NO
+CSV_1_SORT_GROUP $(SORT_GROUP_CSV_1)
+DEFAULT_MACRO _SORT_PARAMS_CSV_1 
+CSV_1_SORT_PARAMS $(_SORT_PARAMS_CSV_1)
+DEFAULT_MACRO FILTER_GROUP_CSV_1 NO
+CSV_1_FILTER_GROUP $(FILTER_GROUP_CSV_1)
+DEFAULT_MACRO _FILTER_PARAMS_CSV_1 
+CSV_1_FILTER_PARAMS $(_FILTER_PARAMS_CSV_1)
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or csv_.
+CSV_1_UNENCODED_ATTR_PREFIX fme_ csv_
+# ===========================================================================
+DEFAULT_MACRO CSV_IN_NETWORK_AUTHENTICATION_CSV_1 
+CSV_1_NETWORK_AUTHENTICATION "$(CSV_IN_NETWORK_AUTHENTICATION_CSV_1)"
+GUI OPTIONAL AUTHENTICATOR CSV_IN_NETWORK_AUTHENTICATION_CSV_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+GUI INTEGER _SKIP_LINES_CSV_1 Number of Lines to Skip:
+GUI INTEGER _SKIP_FOOTER_CSV_1 Number of Footer Lines to Skip:
+# GUI CHOICE _IN_FIELD_NAMES yes%no Field Names in File:
+# GUI CHOICE _FIELD_NAMES_AFTER_HEADER yes%no Field After Header:
+GUI CHOICE _STRIP_QUOTES_CSV_1 yes%no Strip Quotes From Fields:
+# GUI TEXT _IN_SEPARATOR Field Delimiter:
+# GUI TEXT _EXTENSION Default File Extension:
+GUI CHOICE _DUPLICATE_DELIMS_CSV_1 yes%no Skip Duplicate Delimiters:
+GUI CHOICE SORT_GROUP_CSV_1 yes%no Sorting Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _SORT_PARAMS_CSV_1 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Attribute"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES FileCode%Country%Year%Survey_ID_num%CountryCodeShort"%%"Alpha/Num"%"LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric"%alphabetic%"Order"%"LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending"%ascending Sorting Parameters:
+GUI CHOICE FILTER_GROUP_CSV_1 yes%no Filter Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _FILTER_PARAMS_CSV_1 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Field Name"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES FileCode%Country%Year%Survey_ID_num%CountryCodeShort"%%"Filter"%"STRING_ENCODED _FILTER_REGEX "%%"Invert Filter"%"CHECKBOX _FILTER_UNMATCHED yes%no"%no Filter Parameters:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO _ENCODING_CSV_1 
+GUI OPTIONAL STRING_OR_ENCODING _ENCODING_CSV_1 SYSTEM%* Character Encoding:
+CSV_1_ENCODING $(_ENCODING_CSV_1)
+CSV_1_DATASET "$(SourceDataset_CSV_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_2"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_2
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source of the CSV files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV_2 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV CSV_2
+DEFAULT_MACRO SourceDataset_CSV_2 $(SourceDataset_CSV_2)
+GUI MULTIFILE SourceDataset_CSV_2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (CommaSeparatedValue) File(s):
+# ============================================================================
+# Hardcode the settings that were used to generate this mapping file
+#
+DEFAULT_MACRO _SCHEMA_CSV_2 char,7,,char,6,,char,4,,char,5,,char,63,,number,4,0,number,2,0,char,1,,char,12,,char,4,,char,162,,char,2,,char,73,,char,2,
+DEFAULT_MACRO _IN_FIELD_NAMES_CSV_2 YES
+DEFAULT_MACRO _FIELD_NAMES_AFTER_HEADER_CSV_2 no
+DEFAULT_MACRO _EXTENSION_CSV_2 CSV
+DEFAULT_MACRO _ALLOW_SPACES_IN_COLUMN_NAMES_CSV_2 yes
+DEFAULT_MACRO _GROUP_BY_DATASET_CSV_2 yes
+CSV_2_SCHEMA char,7,,char,6,,char,4,,char,5,,char,63,,number,4,0,number,2,0,char,1,,char,12,,char,4,,char,162,,char,2,,char,73,,char,2,
+DEFAULT_MACRO _SKIP_LINES_CSV_2 1
+CSV_2_SKIP_LINES $(_SKIP_LINES_CSV_2)
+DEFAULT_MACRO _SKIP_FOOTER_CSV_2 0
+CSV_2_SKIP_FOOTER $(_SKIP_FOOTER_CSV_2)
+CSV_2_FIELD_NAMES $(_IN_FIELD_NAMES_CSV_2)
+CSV_2_FIELD_NAMES_AFTER_HEADER $(_FIELD_NAMES_AFTER_HEADER_CSV_2)
+DEFAULT_MACRO _STRIP_QUOTES_CSV_2 yes
+CSV_2_STRIP_QUOTES $(_STRIP_QUOTES_CSV_2)
+CSV_2_SEPARATOR (",")
+CSV_2_EXTENSION CSV
+DEFAULT_MACRO _DUPLICATE_DELIMS_CSV_2 no
+CSV_2_DUPLICATE_DELIMS $(_DUPLICATE_DELIMS_CSV_2)
+CSV_2_SEQUENCED no
+CSV_2_ALLOW_SPACES_IN_COLUMN_NAMES $(_ALLOW_SPACES_IN_COLUMN_NAMES_CSV_2)
+CSV_2_GROUP_BY_DATASET $(_GROUP_BY_DATASET_CSV_2)
+DEFAULT_MACRO SORT_GROUP_CSV_2 NO
+CSV_2_SORT_GROUP $(SORT_GROUP_CSV_2)
+DEFAULT_MACRO _SORT_PARAMS_CSV_2 
+CSV_2_SORT_PARAMS $(_SORT_PARAMS_CSV_2)
+DEFAULT_MACRO FILTER_GROUP_CSV_2 NO
+CSV_2_FILTER_GROUP $(FILTER_GROUP_CSV_2)
+DEFAULT_MACRO _FILTER_PARAMS_CSV_2 
+CSV_2_FILTER_PARAMS $(_FILTER_PARAMS_CSV_2)
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or csv_.
+CSV_2_UNENCODED_ATTR_PREFIX fme_ csv_
+# ===========================================================================
+DEFAULT_MACRO CSV_IN_NETWORK_AUTHENTICATION_CSV_2 
+CSV_2_NETWORK_AUTHENTICATION "$(CSV_IN_NETWORK_AUTHENTICATION_CSV_2)"
+GUI OPTIONAL AUTHENTICATOR CSV_IN_NETWORK_AUTHENTICATION_CSV_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+GUI INTEGER _SKIP_LINES_CSV_2 Number of Lines to Skip:
+GUI INTEGER _SKIP_FOOTER_CSV_2 Number of Footer Lines to Skip:
+# GUI CHOICE _IN_FIELD_NAMES yes%no Field Names in File:
+# GUI CHOICE _FIELD_NAMES_AFTER_HEADER yes%no Field After Header:
+GUI CHOICE _STRIP_QUOTES_CSV_2 yes%no Strip Quotes From Fields:
+# GUI TEXT _IN_SEPARATOR Field Delimiter:
+# GUI TEXT _EXTENSION Default File Extension:
+GUI CHOICE _DUPLICATE_DELIMS_CSV_2 yes%no Skip Duplicate Delimiters:
+GUI CHOICE SORT_GROUP_CSV_2 yes%no Sorting Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _SORT_PARAMS_CSV_2 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Attribute"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES FileCode%RecordName%RecordTypeValue%Name%Label%Start%Len%Occurrences%FMETYPE%CountAsTreatment_Initial%BM_CountAsSeekedTreatment%OUTPUT_CountAsTreatmentSought%Note%Any_Treat"%%"Alpha/Num"%"LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric"%alphabetic%"Order"%"LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending"%ascending Sorting Parameters:
+GUI CHOICE FILTER_GROUP_CSV_2 yes%no Filter Enabled:
+GUI OPTIONAL GUI_LINE_TABLE _FILTER_PARAMS_CSV_2 NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%"Field Name"%"STRING_OR_CHOICE_ENCODED ATTRIBUTES FileCode%RecordName%RecordTypeValue%Name%Label%Start%Len%Occurrences%FMETYPE%CountAsTreatment_Initial%BM_CountAsSeekedTreatment%OUTPUT_CountAsTreatmentSought%Note%Any_Treat"%%"Filter"%"STRING_ENCODED _FILTER_REGEX "%%"Invert Filter"%"CHECKBOX _FILTER_UNMATCHED yes%no"%no Filter Parameters:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO _ENCODING_CSV_2 
+GUI OPTIONAL STRING_OR_ENCODING _ENCODING_CSV_2 SYSTEM%* Character Encoding:
+CSV_2_ENCODING $(_ENCODING_CSV_2)
+CSV_2_DATASET "$(SourceDataset_CSV_2)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV_3"
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_3
+# ============================================================================
+# The following GUI line prompts for a folder where the
+# CSV files will be stored
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_CSV_3 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER CSV CSV_3
+DEFAULT_MACRO DestDataset_CSV_3 $(DestDataset_CSV)
+GUI DIRNAME DestDataset_CSV_3 Destination CSV (CommaSeparatedValue) Folder:
+CSV_3_PLUGIN_MAX_CHANNELS 100
+CSV_3_ALLOW_TYPE_TRUNCATION yes
+CSV_3_PERMISSIVE_TYPES yes
+# ============================================================================
+# The following determines the extension for output CSV files
+DEFAULT_MACRO CSV_OUT_EXTENSION_CSV_3 csv
+CSV_3_EXTENSION "$(CSV_OUT_EXTENSION_CSV_3)"
+GUI OPTIONAL TEXT CSV_OUT_EXTENSION_CSV_3 Extension:
+# =====================================================================
+# Allows one to append
+DEFAULT_MACRO CSV_OUT_APPEND_CSV_3 No
+CSV_3_APPEND "$(CSV_OUT_APPEND_CSV_3)"
+GUI CHECKBOX CSV_OUT_APPEND_CSV_3 Yes%No Append to File:
+# ============================================================================
+# The following determines whether field names will be written on
+# the first row of the file.
+DEFAULT_MACRO CSV_OUT_FIELD_NAMES_CSV_3 yes
+CSV_3_FIELD_NAMES "$(CSV_OUT_FIELD_NAMES_CSV_3)"
+GUI CHECKBOX CSV_OUT_FIELD_NAMES_CSV_3 yes%no Output Field Names on First Line:
+# ============================================================================
+# The following determines the field seperator
+# PR#19714 Changed GUI LOOKUP to STRING_OR_CHOICE for showing space and tab
+# as explicit delimiters for parsing issues and symmetry with the reader.
+DEFAULT_MACRO CSV_OUT_SEPARATOR_CSV_3 ,
+CSV_3_SEPARATOR "$(CSV_OUT_SEPARATOR_CSV_3)"
+GUI OPTIONAL STRING_OR_CHOICE CSV_OUT_SEPARATOR_CSV_3 ,%;%|%space%tab Separator Character:
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO CSV_OUT_ENCODING_CSV_3 
+CSV_3_ENCODING "$(CSV_OUT_ENCODING_CSV_3)"
+GUI OPTIONAL STRING_OR_ENCODING CSV_OUT_ENCODING_CSV_3 SYSTEM%* Character Encoding:
+# ============================================================================
+# The following specifies if output values should be quoted
+DEFAULT_MACRO _OUT_QUOTE_OUTPUT_CSV_3 if_needed
+GUI CHOICE _OUT_QUOTE_OUTPUT_CSV_3 yes%if_needed%no Quote Output Values:
+CSV_3_QUOTE_OUTPUT $(_OUT_QUOTE_OUTPUT_CSV_3)
+# ============================================================================
+# The following choice determines if field names on the first row
+# should be quoted or not.
+DEFAULT_MACRO _QUOTE_FIELD_NAMES_CSV_3 no
+GUI CHOICE _QUOTE_FIELD_NAMES_CSV_3 yes%no Quote Field Names:
+CSV_3_QUOTE_FIELD_NAMES $(_QUOTE_FIELD_NAMES_CSV_3)
+# =====================================================================
+# Allows to set Line termination type
+DEFAULT_MACRO CSV_OUT_END_OF_LINE_CSV_3 
+GUI OPTIONAL CHOICE CSV_OUT_END_OF_LINE_CSV_3 Windows%Unix%Macintosh Line Termination:
+CSV_3_END_OF_LINE $(CSV_OUT_END_OF_LINE_CSV_3)
+# ============================================================================
+# PR 15909
+# The following choice determines if the byte order mark should be written
+# when using UTF-8 encoding. By default BOM is written, so _WRITE_UTF8_BOM should be yes.
+DEFAULT_MACRO _WRITE_UTF8_BOM_CSV_3 yes
+GUI CHOICE _WRITE_UTF8_BOM_CSV_3 yes%no Write UTF-8 Byte Order Mark
+CSV_3_WRITE_UTF8_BOM $(_WRITE_UTF8_BOM_CSV_3)
+CSV_3_DATASET "$(DestDataset_CSV_3)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)consolidate_fever_treatments.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_CSV_1 CSV_1
+DEFAULT_MACRO DATASET_KEYWORD_CSV_2 CSV_2
+DEFAULT_MACRO DATASET_KEYWORD_CSV_3 CSV_3
+# -------------------------------------------------------------------------
+
+CSV_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+CSV_2_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME consolidate_fever_treatments
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+CSV_1_DEF SurveysInEndemicCountries   FileCode                     char(11)   Country                      char(26)   Year                         char(8)   Survey_ID_num                number(4,0)   CountryCodeShort             char(3)
+# -------------------------------------------------------------------------
+CSV_2_DEF "Merged H32 BM KB"   FileCode                     char(7)   RecordName                   char(6)   RecordTypeValue              char(4)   Name                         char(5)   Label                        char(63)   Start                        number(4,0)   Len                          number(2,0)   Occurrences                  char(1)   FMETYPE                      char(12)   CountAsTreatment_Initial     char(4)   BM_CountAsSeekedTreatment    char(162)   OUTPUT_CountAsTreatmentSought char(2)   Note                         char(73)   Any_Treat                    char(2)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE CSV CSV_1::SurveysInEndemicCountries multi_reader_keyword,$(DATASET_KEYWORD_CSV_1) TO FME_GENERIC ::SurveysInEndemicCountries ALIAS_GEOMETRY    ROUTE CSV "CSV_2::Merged H32 BM KB" multi_reader_keyword,$(DATASET_KEYWORD_CSV_2) TO FME_GENERIC "::Merged H32 BM KB" ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+CSV_1_MERGE_DEF CSV_1::SurveysInEndemicCountries EXACT SurveysInEndemicCountries
+CSV_2_MERGE_DEF "CSV_2::Merged H32 BM KB" EXACT Merged<space>H32<space>BM<space>KB
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_5 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE SurveysInEndemicCountries ATTR parsedREC43path C:<backslash>Users<backslash>zool1301<backslash>Documents<backslash>DHS<backslash>Scrape<backslash>ParsedSpecs<backslash><at>Value<openparen>FileCode<closeparen>.FlatRecordSpec.csv    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT 
+# -------------------------------------------------------------------------
+MACRO FeatureReader_OUTPUT_PORTS_ENCODED 
+MACRO FeatureReader_DIRECTIVES _STRIP_QUOTES yes _FIELD_NAMES_AFTER_HEADER no _DUPLICATE_DELIMS no _SKIP_LINES 1 _IN_FIELD_NAMES YES FILTER_GROUP NO _IN_SEPARATOR , _GROUP_BY_DATASET no _SKIP_FOOTER 0 _SORT_TABLE_CONFIG """NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%\""Attribute\""%\""STRING_OR_CHOICE_ENCODED ATTRIBUTES %\""%%\""Alpha/Num\""%\""LOOKUP_CHOICE SORT_CHOICE Alphabetic,alphabetic%Numeric,numeric\""%alphabetic%\""Order\""%\""LOOKUP_CHOICE SORT_ORDER Ascending,ascending%Descending,descending\""%ascending""" _ALLOW_SPACES_IN_COLUMN_NAMES yes SORT_GROUP NO _FILTER_TABLE_CONFIG """NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:;%COL_DELIM:,%HAS_DEFAULTS%START_NUM_ROWS:3%\""Field Name\""%\""STRING_OR_CHOICE_ENCODED ATTRIBUTES %\""%%\""Filter\""%\""STRING_ENCODED _FILTER_REGEX \""%%\""Invert Filter\""%\""CHECKBOX _FILTER_UNMATCHED yes%no\""%no""" SCAN_MAX_FEATURES 1000
+
+# Values come in encoded and come out decoded.
+Tcl2 proc FeatureReader_findInListElseDefault { valueEncoded defaultValue } {    if { [lsearch [split {$(FeatureReader_OUTPUT_PORTS_ENCODED)}] $valueEncoded] >= 0} {       return FeatureReader_[FME_DecodeText $valueEncoded]    } else {       return FeatureReader_$defaultValue    } }
+# Always provide an INTERACTION, otherwise the factory defaults to ENVELOPE_INTERSECTS
+INCLUDE [if { ( {<Unused>} == {<Unused>} ) || ( {($INTERACT_OPTIONS)} == {} ) } {             puts {MACRO FCTQUERY_INTERACTION_LINE FCTQUERY_INTERACTION NONE};          } else {             puts {MACRO FCTQUERY_INTERACTION_LINE FCTQUERY_INTERACTION "<Unused>"};          }         ]
+# Consolidate the attribute merge options to what the factory expects
+DEFAULT_MACRO FeatureReader_COMBINE_ATTRS
+INCLUDE [       if { {MERGE} == {MERGE} } {          puts "MACRO FeatureReader_COMBINE_ATTRS PREFER_RESULT";       } else {          puts "MACRO FeatureReader_COMBINE_ATTRS MERGE";       };    ]
+FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE AttributeCreator_5_OUTPUT    $(FCTQUERY_INTERACTION_LINE)    QUERYFCT_TABLE_SEPARATOR SPACE    COMBINE_ATTRIBUTES  $(FeatureReader_COMBINE_ATTRS)    QUERYFCT_ATTRIBUTE_PREFIX <Unused>    COMBINE_GEOMETRY    RESULT_ONLY    ENABLE_CACHE        NO    READER_TYPE         CSV    READER_DATASET      "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>parsedREC43path<closeparen>,FeatureReader)"    READER_IDS    READER_DIRECTIVES   META_MACROS,SourcegroupBox<comma><comma>Source_STRIP_QUOTES<comma>yes<comma>Source_FIELD_NAMES_AFTER_HEADER<comma>no<comma>SourcegroupBox_2<comma><comma>Source_DUPLICATE_DELIMS<comma>no<comma>Source_SKIP_LINES<comma>1<comma>SourcegroupBox_4<comma><comma>Source_IN_FIELD_NAMES<comma>YES<comma>SourcegroupBox_5<comma><comma>SourcegroupBox_6<comma><comma>SourceFILTER_GROUP<comma>NO<comma>Source_IN_SEPARATOR<comma><quote><comma><quote><comma>Source_GROUP_BY_DATASET<comma>no<comma>Source_SCHEMA<comma><comma>Source_SKIP_FOOTER<comma>0<comma>Source_SORT_TABLE_CONFIG<comma><quote><quote><quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote><quote>Attribute<backslash><quote><quote>%<backslash><quote><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>%<backslash><quote><quote>%%<backslash><quote><quote>Alpha<solidus>Num<backslash><quote><quote>%<backslash><quote><quote>LOOKUP_CHOICE<space>SORT_CHOICE<space>Alphabetic<comma>alphabetic%Numeric<comma>numeric<backslash><quote><quote>%alphabetic%<backslash><quote><quote>Order<backslash><quote><quote>%<backslash><quote><quote>LOOKUP_CHOICE<space>SORT_ORDER<space>Ascending<comma>ascending%Descending<comma>descending<backslash><quote><quote>%ascending<quote><quote><quote><comma>Source_ALLOW_SPACES_IN_COLUMN_NAMES<comma>yes<comma>SourceSORT_GROUP<comma>NO<comma>Source_SCHEMA_WITH_COL_NAMES<comma><comma>Source_FILTER_TABLE_CONFIG<comma><quote><quote><quote>NOT_OK_IF_INVALID%NO_LABEL%ROW_DELIM:<semicolon>%COL_DELIM:<comma>%HAS_DEFAULTS%START_NUM_ROWS:3%<backslash><quote><quote>Field<space>Name<backslash><quote><quote>%<backslash><quote><quote>STRING_OR_CHOICE_ENCODED<space>ATTRIBUTES<space>%<backslash><quote><quote>%%<backslash><quote><quote>Filter<backslash><quote><quote>%<backslash><quote><quote>STRING_ENCODED<space>_FILTER_REGEX<space><backslash><quote><quote>%%<backslash><quote><quote>Invert<space>Filter<backslash><quote><quote>%<backslash><quote><quote>CHECKBOX<space>_FILTER_UNMATCHED<space>yes%no<backslash><quote><quote>%no<quote><quote><quote><comma>SourceSCAN_MAX_FEATURES<comma>1000<comma>Source_ENCODING<comma><comma>SourceSTRIP_QUOTES<comma>yes<comma>SourceDUPLICATE_DELIMS<comma>no<comma>SourceSKIP_LINES<comma>1<comma>SourceFIELD_NAMES<comma>YES,METAFILE,CSV    QUERYFCT_OUTPUT     "BASED_ON_CONNECTIONS"    CONTINUE_ON_READER_ERROR YES    READER_PARAMS     $(FeatureReader_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE *         @SupplyAttributes(fme_feature_type,@FeatureType())         @Tcl2("set FME_FeatureType [FeatureReader_findInListElseDefault [FME_EncodeText $FME_FeatureType] {<OTHER>}]")         @Transform(CSV,FME_GENERIC)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE FeatureReader_<OTHER>    TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>Name<closeparen>,Tester) BEGINS_WITH H32 ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED
+# -------------------------------------------------------------------------
+
+MACRO casemac
+INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc StringSearcher_07085b50_6331_4fdc_a323_f73da801c93f0_doGrep { stringToSearch regExp matchedChars matchedParts } {   set results [regexp -inline $(casemac) [FME_DecodeText $regExp]                  [FME_DecodeText $stringToSearch]];   set attrName $matchedChars;   set index 0;   foreach part $results {       FME_SetAttribute $attrName $part;       set attrName "$matchedParts{$index}";       incr index;   };   if {$index > 0} {       FME_UnsetAttributes $attrName;   };   return $index; }
+FACTORY_DEF * TestFactory    FACTORY_NAME StringSearcher    INPUT  FEATURE_TYPE Tester_PASSED    TEST @Tcl2("StringSearcher_07085b50_6331_4fdc_a323_f73da801c93f0_doGrep {@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>FileCode<closeparen>,StringSearcher)} {^<backslash>d+<backslash>.<openparen><backslash>w+<closeparen>} {_matched_characters} {_old_filecode}") > 0    OUTPUT PASSED FEATURE_TYPE StringSearcher_MATCHED
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc ListIndexer_indexer {index numElements prefix} {    if {$index < 0 } {       set index [expr $numElements + $index];    };    regsub \"{}\" {_old_filecode{}} \"{$index}\" listWithIndex;    regsub \"{}\" {_old_filecode{}} {} listBase;    set complexListExp "$listWithIndex\.";    set prefixLength [expr [string length $complexListExp]-1];    set prefix [FME_DecodeText $prefix];    foreach attr [FME_AttributeNames] {      set newAttr {};      if {$attr == $listWithIndex} {        set newAttr $listBase;      } elseif {[string first $complexListExp $attr] == 0} {        set newAttr [string replace $attr 0 $prefixLength];      };      if {$newAttr != {}} {          if {$prefix != {} } {            set newAttr $prefix$newAttr;          };          if {[string first {fme_} $newAttr] != 0} {              set first [string first {fme_} $newAttr];              lappend attrsToCopy $newAttr $attr;          };      };    };    if {[info exists attrsToCopy] && [llength $attrsToCopy] > 0} {      eval FME_Execute CopyAttributes $attrsToCopy;    }; }
+FACTORY_DEF * TestFactory    FACTORY_NAME ListIndexer    INPUT  FEATURE_TYPE StringSearcher_MATCHED    TEST "0" >= 0    OUTPUT PASSED FEATURE_TYPE ListIndexer_OUTPUT @Tcl2("ListIndexer_indexer 0 0 {}")    OUTPUT FAILED FEATURE_TYPE ListIndexer_OUTPUT @Tcl2("ListIndexer_indexer 0 @NumElements(_old_filecode{})  {}")
+# -------------------------------------------------------------------------
+
+INCLUDE [if { {ATTRIBUTES} == {ATTRIBUTES} } {                puts "MACRO FeatureMerger_REFERENCE_INFO ATTRIBUTES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          else {}; ]
+
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger    INPUT REFERENCER FEATURE_TYPE ListIndexer_OUTPUT    INPUT REFERENCEE FEATURE_TYPE "Merged H32 BM KB"    REFERENCE_INFO $(FeatureMerger_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_old_filecode<closeparen>,FeatureMerger) @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>FileCode<closeparen>,FeatureMerger) AUTO    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "REQUESTOR_IF_CONFLICT"    IGNORE_NULLS "No"    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    REFERENCEES_FIRST No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_MERGED    OUTPUT INCOMPLETE FEATURE_TYPE FeatureMerger_NOT_MERGED    OUTPUT UNREFERENCED FEATURE_TYPE FeatureMerger_UNREFERENCED
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureMerger NOT_MERGED Splitter"   INPUT FEATURE_TYPE FeatureMerger_NOT_MERGED   OUTPUT FEATURE_TYPE FeatureMerger_NOT_MERGED_0_3t25U9Xoabs=   OUTPUT FEATURE_TYPE FeatureMerger_NOT_MERGED_1_3t25U9Xoabs=
+# -------------------------------------------------------------------------
+
+# Set the directive to add all the meta-attributes to the features.
+# We do this so users see all possible information in the viewed
+# features.
+
+READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [         set grpByAttrs {};         if { [string length $grpByAttrs] > 0 } {             if { [string first "@EvaluateExpression" $grpByAttrs] == 0 } {                 puts "MACRO CATMAC _$grpByAttrs" ;             } else {                set catter "" ;                set comma "" ;                foreach attr $grpByAttrs {                    set catter "$catter$comma@Value(\"$attr\")" ;                    set comma ",_," ;                } ;                puts "MACRO CATMAC _@Concatenate($catter)" ;             }         }         else {             puts "MACRO CATMAC " ;         };         set safeName "[regsub -all {[^a-zA-Z0-9]} {FeatureMerger_Unreferenced} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";         puts "MACRO SAFE_FFS_NAME $safeName";         ]
+# Make the temporary directory that the FFS files will live in.
+FACTORY_DEF * CreationFactory      FACTORY_NAME FeatureMerger_Unreferenced_DirCreator      OUTPUT FEATURE_TYPE __nukeme__          @Tcl2("catch {file mkdir {$(WORKSPACE_TEMP_DIR)}}")
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Unreferenced_DirCreatorCleanerUpper    INPUT FEATURE_TYPE __nukeme__
+# Send raster, point cloud and vector features down different paths to prepare
+# them for viewing
+
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureMerger_Unreferenced_FeatureDirector    INPUT  FEATURE_TYPE FeatureMerger_UNREFERENCED    TEST &fme_type == "fme_raster"    OUTPUT FAILED FEATURE_TYPE FeatureMerger_Unreferenced___NotRasterFeatures___    OUTPUT PASSED FEATURE_TYPE FeatureMerger_Unreferenced___RasterFeatures___
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureMerger_Unreferenced___FeatureDirector1    INPUT FEATURE_TYPE FeatureMerger_Unreferenced___NotRasterFeatures___    TEST &fme_type == "fme_point_cloud"    OUTPUT FAILED FEATURE_TYPE FeatureMerger_Unreferenced___VectorFeatures___    OUTPUT PASSED FEATURE_TYPE FeatureMerger_Unreferenced___PointCloudFeatures___
+# Vector features simply may get their colors overridden
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Unreferenced_VectorSetterUpper    INPUT FEATURE_TYPE FeatureMerger_Unreferenced___VectorFeatures___    OUTPUT FEATURE_TYPE __viewme__
+# Point Cloud Features Might Need to be thinned
+
+# Note that we don't call the ThinPointCloud function directly, but rather
+# do it through TCL. This should allow this transformer to be used with a
+# Desktop license, even though ThinPointCloud requires Professional.
+
+Tcl2 proc FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_thinPointCloud {} {    if {[string equal {NO_THINNING} {KEEPNPOINT}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {MAXNUMPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {FIRSTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {LASTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Unreferenced___PointCloudThinner    INPUT FEATURE_TYPE FeatureMerger_Unreferenced___PointCloudFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_thinPointCloud")
+Tcl2 proc FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_prepareRaster {subsetStartRow subsetNumRows subsetStartCol subsetNumCols} {    set useDI [string equal -nocase {$(FME_VIEWER_APP)} {fmedatainspector}];    if {!$useDI} {       FME_Execute ApplyRasterRotation BILINEAR;    };    set doResample [string equal {NoReduction} {Resample}];    set doSubset [string equal {NoReduction} {Subset}];    set doBounds [string equal {NoReduction} {BoundingBoxOnly}];    if {$doBounds}  {       FME_Execute GeometryType fme_polygon;    }    elseif {$doResample || $doSubset} {       set comment {          First, we need to prefix all the attributes. This is done because          we are going to call @RasterProperties, and we want to make sure          it doesn't overwrite any existing attributes.       };       set kAttrPrefix ".";       set allNames [FME_AttributeNames];       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $newName $oldName;       };       FME_Execute RasterProperties RASTER;       if {$doResample} {          set oldNumCols [FME_GetAttribute _num_columns];          set oldNumRows [FME_GetAttribute _num_rows];          set oldSpacingX [FME_GetAttribute _spacing_x];          set oldSpacingY [FME_GetAttribute _spacing_y];          set kMinNumCells 32;          set kMaxNumCells 512;          set comment {             We will only resample if both dimensions are greater than the             minimum num cells, and at least one is greater than the maximum.          };          if {$oldNumRows > $kMinNumCells && $oldNumCols > $kMinNumCells && ($oldNumRows > $kMaxNumCells || $oldNumCols > $kMaxNumCells)} {             set newSpacingX 1.0;             set newSpacingY 1.0;             if {$oldNumRows > $oldNumCols} {                set comment {                   If we have more rows than columns, we need to choose a spacing                   that reduces the number of rows to the maximum we've chosen.                };                set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMaxNumCells];                set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                set comment {                   Now we need to check if doing this will result in the columns                   going below the minimum. If so, choose the spacing such that                   we only go down to the minimum (and not past).                };                set newNumCols [expr $oldNumCols * $oldSpacingX / $newSpacingX];                if {$newNumCols < $kMinNumCells}                {                   set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMinNumCells];                   set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                };             }             else {                set comment {                   This is identical to the above case, except the roles of                   rows and cols are reversed.                };                set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMaxNumCells];                set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                set newNumRows [expr $oldNumRows * $oldSpacingY / $newSpacingY];                if {$newNumRows < $kMinNumCells}                {                   set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMinNumCells];                   set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                };             };             FME_Execute ResampleRaster CELL_SIZE $newSpacingX $newSpacingY NearestNeighbor;          };       }       elseif {$doSubset} {          set comment {             Get the value of some strings that may be attributes or constants.             Note that we pass in the attribute prefix we're using, because if             one does turn out to be an attribute, it won't actually be the exact             name in the string (since we renamed all our attributes above).          };          set rasterNumRows [FME_GetAttribute _num_rows];          set rasterNumCols [FME_GetAttribute _num_columns];          set comment {             Only do subsetting if the specified start position is actually             within the raster.          };          if {$subsetStartRow < $rasterNumRows && $subsetStartCol < $rasterNumCols}          {             set comment {                Now bound the subset to the size of the raster, so that                we don't create padding.             };             if {[expr $subsetStartRow + $subsetNumRows] > $rasterNumRows}             {                set subsetNumRows [expr $rasterNumRows - $subsetStartRow];             };             if {[expr $subsetStartCol + $subsetNumCols] > $rasterNumCols}             {                set subsetNumCols [expr $rasterNumCols - $subsetStartCol];             };             FME_Execute SubsetRaster $subsetStartRow $subsetNumRows $subsetStartCol $subsetNumCols;          };       };       set comment {          Remove all the attributes added by @RasterProperties and remove the          prefix from the real attributes. We assume they all start with an          underscore.       };       FME_Execute RemoveAttributes fme_regexp_match {^_};       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $oldName $newName;       };    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_Unreferenced_RasterSetterUpper    INPUT FEATURE_TYPE FeatureMerger_Unreferenced___RasterFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_prepareRaster {<Unused>} {<Unused>} {<Unused>} {<Unused>}")
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+# FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_VIS_FEAT_TYPE changes the feature types
+# of the features being visualized.
+
+DEFAULT_MACRO FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_VIS_FEAT_TYPE FeatureMerger_Unreferenced$(CATMAC)
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME FeatureMerger_Unreferenced_Recorder    INPUT FEATURE_TYPE __viewme__  _wb_termination_feature Yes @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__  @FeatureType($(FeatureMerger_Unreferenced_ddc5cebe_f23e_4648_a60f_d2edc17584a60_VIS_FEAT_TYPE))    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA FileCode,varchar<openparen>255<closeparen>,RecordName,varchar<openparen>255<closeparen>,RecordTypeValue,varchar<openparen>255<closeparen>,Name,varchar<openparen>255<closeparen>,Label,varchar<openparen>255<closeparen>,Start,varchar<openparen>255<closeparen>,Len,varchar<openparen>255<closeparen>,Occurrences,varchar<openparen>255<closeparen>,FMETYPE,varchar<openparen>255<closeparen>,CountAsTreatment_Initial,varchar<openparen>255<closeparen>,BM_CountAsSeekedTreatment,varchar<openparen>255<closeparen>,OUTPUT_CountAsTreatmentSought,varchar<openparen>255<closeparen>,Note,varchar<openparen>255<closeparen>,Any_Treat,varchar<openparen>255<closeparen>    MODE RECORD    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+# -------------------------------------------------------------------------
+
+# Set the directive to add all the meta-attributes to the features.
+# We do this so users see all possible information in the viewed
+# features.
+
+READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
+# Assumption is that the workspace temp dir has been already set and created.  See controldefs.cpp - ControlDefs::writeVisualizerTempDir
+DEFAULT_MACRO WORKSPACE_TEMP_DIR
+INCLUDE [         set grpByAttrs {};         if { [string length $grpByAttrs] > 0 } {             if { [string first "@EvaluateExpression" $grpByAttrs] == 0 } {                 puts "MACRO CATMAC _$grpByAttrs" ;             } else {                set catter "" ;                set comma "" ;                foreach attr $grpByAttrs {                    set catter "$catter$comma@Value(\"$attr\")" ;                    set comma ",_," ;                } ;                puts "MACRO CATMAC _@Concatenate($catter)" ;             }         }         else {             puts "MACRO CATMAC " ;         };         set safeName "[regsub -all {[^a-zA-Z0-9]} {FeatureMerger_NotMerged} _]_[expr round(rand() * 1000000)]_[clock clicks  -milliseconds]";         puts "MACRO SAFE_FFS_NAME $safeName";         ]
+# Make the temporary directory that the FFS files will live in.
+FACTORY_DEF * CreationFactory      FACTORY_NAME FeatureMerger_NotMerged_DirCreator      OUTPUT FEATURE_TYPE __nukeme__          @Tcl2("catch {file mkdir {$(WORKSPACE_TEMP_DIR)}}")
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_NotMerged_DirCreatorCleanerUpper    INPUT FEATURE_TYPE __nukeme__
+# Send raster, point cloud and vector features down different paths to prepare
+# them for viewing
+
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureMerger_NotMerged_FeatureDirector    INPUT  FEATURE_TYPE FeatureMerger_NOT_MERGED_1_3t25U9Xoabs=    TEST &fme_type == "fme_raster"    OUTPUT FAILED FEATURE_TYPE FeatureMerger_NotMerged___NotRasterFeatures___    OUTPUT PASSED FEATURE_TYPE FeatureMerger_NotMerged___RasterFeatures___
+FACTORY_DEF * TestFactory    FACTORY_NAME FeatureMerger_NotMerged___FeatureDirector1    INPUT FEATURE_TYPE FeatureMerger_NotMerged___NotRasterFeatures___    TEST &fme_type == "fme_point_cloud"    OUTPUT FAILED FEATURE_TYPE FeatureMerger_NotMerged___VectorFeatures___    OUTPUT PASSED FEATURE_TYPE FeatureMerger_NotMerged___PointCloudFeatures___
+# Vector features simply may get their colors overridden
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_NotMerged_VectorSetterUpper    INPUT FEATURE_TYPE FeatureMerger_NotMerged___VectorFeatures___    OUTPUT FEATURE_TYPE __viewme__
+# Point Cloud Features Might Need to be thinned
+
+# Note that we don't call the ThinPointCloud function directly, but rather
+# do it through TCL. This should allow this transformer to be used with a
+# Desktop license, even though ThinPointCloud requires Professional.
+
+Tcl2 proc FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_thinPointCloud {} {    if {[string equal {NO_THINNING} {KEEPNPOINT}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {MAXNUMPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {FIRSTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }    elseif {[string equal {NO_THINNING} {LASTNPOINTS}]}    {       FME_Execute ThinPointCloud NO_THINNING "\"<Unused>\"";    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_NotMerged___PointCloudThinner    INPUT FEATURE_TYPE FeatureMerger_NotMerged___PointCloudFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_thinPointCloud")
+Tcl2 proc FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_prepareRaster {subsetStartRow subsetNumRows subsetStartCol subsetNumCols} {    set useDI [string equal -nocase {$(FME_VIEWER_APP)} {fmedatainspector}];    if {!$useDI} {       FME_Execute ApplyRasterRotation BILINEAR;    };    set doResample [string equal {NoReduction} {Resample}];    set doSubset [string equal {NoReduction} {Subset}];    set doBounds [string equal {NoReduction} {BoundingBoxOnly}];    if {$doBounds}  {       FME_Execute GeometryType fme_polygon;    }    elseif {$doResample || $doSubset} {       set comment {          First, we need to prefix all the attributes. This is done because          we are going to call @RasterProperties, and we want to make sure          it doesn't overwrite any existing attributes.       };       set kAttrPrefix ".";       set allNames [FME_AttributeNames];       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $newName $oldName;       };       FME_Execute RasterProperties RASTER;       if {$doResample} {          set oldNumCols [FME_GetAttribute _num_columns];          set oldNumRows [FME_GetAttribute _num_rows];          set oldSpacingX [FME_GetAttribute _spacing_x];          set oldSpacingY [FME_GetAttribute _spacing_y];          set kMinNumCells 32;          set kMaxNumCells 512;          set comment {             We will only resample if both dimensions are greater than the             minimum num cells, and at least one is greater than the maximum.          };          if {$oldNumRows > $kMinNumCells && $oldNumCols > $kMinNumCells && ($oldNumRows > $kMaxNumCells || $oldNumCols > $kMaxNumCells)} {             set newSpacingX 1.0;             set newSpacingY 1.0;             if {$oldNumRows > $oldNumCols} {                set comment {                   If we have more rows than columns, we need to choose a spacing                   that reduces the number of rows to the maximum we've chosen.                };                set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMaxNumCells];                set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                set comment {                   Now we need to check if doing this will result in the columns                   going below the minimum. If so, choose the spacing such that                   we only go down to the minimum (and not past).                };                set newNumCols [expr $oldNumCols * $oldSpacingX / $newSpacingX];                if {$newNumCols < $kMinNumCells}                {                   set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMinNumCells];                   set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                };             }             else {                set comment {                   This is identical to the above case, except the roles of                   rows and cols are reversed.                };                set newSpacingX [expr 1.0 * $oldNumCols * $oldSpacingX / $kMaxNumCells];                set newSpacingY [expr 1.0 * $newSpacingX / $oldSpacingX * $oldSpacingY];                set newNumRows [expr $oldNumRows * $oldSpacingY / $newSpacingY];                if {$newNumRows < $kMinNumCells}                {                   set newSpacingY [expr 1.0 * $oldNumRows * $oldSpacingY / $kMinNumCells];                   set newSpacingX [expr 1.0 * $newSpacingY / $oldSpacingY * $oldSpacingX];                };             };             FME_Execute ResampleRaster CELL_SIZE $newSpacingX $newSpacingY NearestNeighbor;          };       }       elseif {$doSubset} {          set comment {             Get the value of some strings that may be attributes or constants.             Note that we pass in the attribute prefix we're using, because if             one does turn out to be an attribute, it won't actually be the exact             name in the string (since we renamed all our attributes above).          };          set rasterNumRows [FME_GetAttribute _num_rows];          set rasterNumCols [FME_GetAttribute _num_columns];          set comment {             Only do subsetting if the specified start position is actually             within the raster.          };          if {$subsetStartRow < $rasterNumRows && $subsetStartCol < $rasterNumCols}          {             set comment {                Now bound the subset to the size of the raster, so that                we don't create padding.             };             if {[expr $subsetStartRow + $subsetNumRows] > $rasterNumRows}             {                set subsetNumRows [expr $rasterNumRows - $subsetStartRow];             };             if {[expr $subsetStartCol + $subsetNumCols] > $rasterNumCols}             {                set subsetNumCols [expr $rasterNumCols - $subsetStartCol];             };             FME_Execute SubsetRaster $subsetStartRow $subsetNumRows $subsetStartCol $subsetNumCols;          };       };       set comment {          Remove all the attributes added by @RasterProperties and remove the          prefix from the real attributes. We assume they all start with an          underscore.       };       FME_Execute RemoveAttributes fme_regexp_match {^_};       foreach oldName $allNames {          set newName $kAttrPrefix;          append newName $oldName;          FME_RenameAttribute $oldName $newName;       };    }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureMerger_NotMerged_RasterSetterUpper    INPUT FEATURE_TYPE FeatureMerger_NotMerged___RasterFeatures___    OUTPUT FEATURE_TYPE __viewme__       @Tcl2("FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_prepareRaster {<Unused>} {<Unused>} {<Unused>} {<Unused>}")
+# Now route all the features into the recorder, changing their
+# feature type to the transformer name so that they view nicely
+# FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_VIS_FEAT_TYPE changes the feature types
+# of the features being visualized.
+
+DEFAULT_MACRO FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_VIS_FEAT_TYPE FeatureMerger_NotMerged$(CATMAC)
+DEFAULT_MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/$(SAFE_FFS_NAME).ffs
+DEFAULT_MACRO VISUALIZER_CREATE_SPATIAL_INDEX NO
+# [PR#45549] The Data Inspector will limit the maximum number of features
+# it reads on WIN32, so we will correspondingly limit the number of
+# features we record here using the MAX_FEATURES_TO_RECORD directive.
+
+FACTORY_DEF * RecorderFactory    FACTORY_NAME FeatureMerger_NotMerged_Recorder    INPUT FEATURE_TYPE __viewme__  _wb_termination_feature Yes @FeatureType(TERMINATOR_@Value(_wb_termination_xformer))    INPUT FEATURE_TYPE __viewme__  @FeatureType($(FeatureMerger_NotMerged_addfe0e7_656b_489d_9834_6d97ca5261330_VIS_FEAT_TYPE))    FEATURE_FILE "$(VISUALIZER_FEATURE_FILE)"    CREATE_SPATIAL_INDEX "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    INSPECTOR "$(VISUALIZER_CREATE_SPATIAL_INDEX)"    FSC_SCHEMA FileCode,varchar<openparen>255<closeparen>,Country,varchar<openparen>255<closeparen>,Year,varchar<openparen>255<closeparen>,Survey_ID_num,varchar<openparen>255<closeparen>,CountryCodeShort,varchar<openparen>255<closeparen>,parsedREC43path,varchar<openparen>255<closeparen>,Name,varchar<openparen>255<closeparen>,Label,varchar<openparen>255<closeparen>,RecordName,varchar<openparen>255<closeparen>,RecordTypeValue,varchar<openparen>255<closeparen>,Start,varchar<openparen>255<closeparen>,Len,varchar<openparen>255<closeparen>,Occurrences,varchar<openparen>255<closeparen>,FMETYPE,varchar<openparen>255<closeparen>,_matched_characters,varchar<openparen>255<closeparen>,_old_filecode,varchar<openparen>255<closeparen>    MODE RECORD    RECORD_DIRECTLY_TO_DISK YES    MAX_FEATURES_TO_RECORD WIN32 2000000
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME TestFilter    INPUT  FEATURE_TYPE FeatureMerger_NOT_MERGED_0_3t25U9Xoabs=    OUTPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_TestFactory_0 INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS no<space>treatment ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) BEGINS_WITH na<space>- ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>Label<closeparen>,TestFilter) ENDS_WITH NA ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_DefinitelyNo OUTPUT FAILED FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_TestFactory_1 INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_1 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS homeopathic ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS no<space>treatment ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS shop ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS market ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS traditional ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS friend ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS church ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS kiosk ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS religious ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) BEGINS_WITH na<space>- ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>Label<closeparen>,TestFilter) ENDS_WITH NA ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_ProbablyNo OUTPUT FAILED FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_2
+FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_TestFactory_2 INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_2 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS hospital ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS government ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS ngo ENCODED TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>LowerCase<openparen><at>Value<openparen>Label<closeparen><closeparen>,TestFilter) CONTAINS welfare ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_ProbablyYes OUTPUT FAILED FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_3
+FACTORY_DEF * TeeFactory FACTORY_NAME TestFilter_DontKnow INPUT FEATURE_TYPE TestFilter_TESTFILTERINPUTLINE_3 OUTPUT FEATURE_TYPE TestFilter_DontKnow
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_3 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE TestFilter_DontKnow ATTR CountAsTreatmentGuess ? ATTR AnyTreatmentGuess ?    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT 
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_2 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE TestFilter_ProbablyYes ATTR CountAsTreatmentGuess Yes ATTR AnyTreatmentGuess Yes    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT 
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE TestFilter_ProbablyNo ATTR CountAsTreatmentGuess No ATTR AnyTreatmentGuess ?    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_4 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV INPUT  FEATURE_TYPE TestFilter_DefinitelyNo ATTR CountAsTreatmentGuess No ATTR AnyTreatmentGuess No
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC AttributeCreator_3_OUTPUT TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>MergedH32_AllEndemic<closeparen> GEOMETRY    ROUTE FME_GENERIC AttributeCreator_OUTPUT TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>MergedH32_AllEndemic<closeparen> GEOMETRY    ROUTE FME_GENERIC AttributeCreator_2_OUTPUT TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>MergedH32_AllEndemic<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_MERGED TO CSV __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>MergedH32_AllEndemic<closeparen> GEOMETRY   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory   CREATE_AT_END   OUTPUT FEATURE_TYPE __NUKEME__   @TCL("if [file exists {$(WORKSPACE_TEMP_DIR)}] {set files [glob -nocomplain -directory  {$(WORKSPACE_TEMP_DIR)} -tails *.ffs];   if {[llength $files] == 1} {    set theFile {$(WORKSPACE_TEMP_DIR)/};   append theFile [lindex $files 0];   eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -f FFS $theFile & \175;  } elseif { [llength $files] == 0 } {  catch { file delete -force {$(WORKSPACE_TEMP_DIR)} };  } else {  set filesNoExt {}; set lastfile {}; foreach {fileName} [lsort $files] { set fileNoExt [string trimright $fileName {.ffs}]; if [regexp {(.*)_[0-9]*$} $fileNoExt wholething fileNoExtBase] {  if { $fileNoExtBase == $lastfile } { continue } }; set lastfile $fileNoExt; lappend filesNoExt $fileNoExt };  eval FME_Execute System \173\042$(FME_HOME_UNIX)/fmedatainspector\042 --visualizer --single-application --delete-on-close --no-source-prompt -d {$(WORKSPACE_TEMP_DIR)} -a ffs -f FFS $filesNoExt & \175; }; }; ")
+FACTORY_DEF * TeeFactory   INPUT FEATURE_TYPE __NUKEME__
+# -------------------------------------------------------------------------
+CSV_3_DEF MergedH32_AllEndemic   csv_append_mode              INHERIT_FROM_WRITER   csv_field_names              INHERIT_FROM_WRITER   FileCode                     char(12)   RecordName                   char(6)   RecordTypeValue              char(4)   Name                         char(7)   Label                        char(62)   Start                        number(4,0)   Len                          number(3,0)   Occurrences                  char(1)   FMETYPE                      char(13)   CountAsTreatmentGuess        char(3)   Note                         char(100)   AnyTreatmentGuess            char(3)   Any_Treat                    char(3)   OUTPUT_CountAsTreatmentSought char(3)
