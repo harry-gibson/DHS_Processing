@@ -341,7 +341,7 @@ class MultiTableJoiner():
         fmt = "LEFT JOIN {0} ON {1}"
         return fmt.format(leftTable, self._GetInnerJoinClause(leftTable, rightTable))
 
-    def GetCreateIntoSQL(self):
+    def GetCreateIntoSQL(self, QualifyFieldNames=False):
         """Get the SQL required to create the output table from the joined inputs.
 
         For example:
@@ -369,8 +369,12 @@ class MultiTableJoiner():
         tblFields = tmp#self._MasterTable.OutputColumns().extend
         #                                ([i._InputTable.OutputColumns() for i in self._TableCopiers]))
         print (len(tblFields))
-        uniqFlds = ", ".join(uniqList(tblFields))#chain()
-        print (len(uniqList(tblFields)))
+        tblFieldsUniq = uniqList(tblFields)
+        if QualifyFieldNames:
+            qualFlds = [i + " as "+i.replace(".","_") for i in tblFieldsUniq]
+            tblFieldsUniq = qualFlds
+        uniqFlds = ", ".join(tblFieldsUniq)#chain()
+        print (len(tblFieldsUniq))
         sel = selectTemplate.format(uniqFlds, self._MasterTable.Name(), tblJoins)
         outSQL = outputTemplate.format(self._OutputTableName, sel)
         return outSQL
