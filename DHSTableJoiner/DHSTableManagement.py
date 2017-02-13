@@ -12,26 +12,50 @@
 #-------------------------------------------------------------------------------
 
 from itertools import chain
+import warnings
 
 def uniqList(input):
-  output = []
-  for x in input:
-    if x not in output:
-      output.append(x)
-  return output
+    """Utility func to remove duplicate elements from a list while preserving order (unlike a set)"""
+    output = []
+    for x in input:
+        if x not in output:
+            output.append(x)
+    return output
 
+class ColumnInfo:
+    """Holds basic info defining a column. TODO add (and use) data type.
+    
+    This class currently doesn't really do anything that a 2-item (name, length) dictionary 
+    as required for instantiating it wouldn't itself do, except be hashable so we can make a set.
+    Equality / hashing is based on the name, and the length is ignored."""
+    def __init__(self, NameLengthDictPair):
+        self.Name = NameLengthDictPair["Name"]
+        self.Length = int(NameLengthDictPair["Length"])
+    def __str__(self):
+        return self.Name
+    def __eq__(self, other):
+        return self.Name == other.Name
+    def __ne__(self, other):
+        return not self.__eq__(other)
+    def __hash__(self):
+        return hash(self.Name)
+        
 class TableInfo:
     """Represents information about a DB table and provides SQL to create it and update it"""
     def __init__(self, InputTableName, JoinColumns, OutputColumns):
         self._Name = InputTableName
 
         # do not sort join columns as we rely on the given order to join to other tables
-        self._JoinColumns = uniqList(JoinColumns)
-
+        #j = [ColumnInfo(p) for p in JoinColumns]
+        #o = [ColumnInfo(p) for p in OutputColumns]
+        j = JoinColumns
+        o = OutputColumns
+        self._JoinColumns = uniqList(j)
+        
         # create s as no-duplicates for table creation
-        _uniqOut = sorted(set(OutputColumns))
-        _outNoJoin = [c for c in _uniqOut if c not in JoinColumns]
-        _joinToOut = [c for c in JoinColumns if c in _uniqOut]
+        _uniqOut = sorted(set(o), key=lambda colinfo: colinfo.Name)
+        _outNoJoin = [c for c in _uniqOut if c not in j]
+        _joinToOut = [c for c in j if c in _uniqOut]
 
         # output columns is whatever was provided but checked for duplicates and sorted,
         # may or may not contain join cols and if it does they are at the start
@@ -43,11 +67,14 @@ class TableInfo:
         self._allColumns = list(chain(self._JoinColumns, _outNoJoin))
 
     def Name(self):
-        """Get the string table name"""
+        """Get the table name, string"""
         return self._Name
 
     def JoinColumns(self):
         """Get the list(string) of join column names"""
+        return [str(c) for c in self._JoinColumns]
+    def JoinColumnsDetails(self):
+        """Get the list(ColumnInfo) of join column details"""
         return self._JoinColumns
 
     def OutputColumns(self, asString=False, qualified=False):
@@ -57,14 +84,18 @@ class TableInfo:
         same as the OutputColumns provided at construction.
         This may or may not include the join columns. """
         if qualified:
-            tmp = [self._Name + "." + f
+            tmp = [self._Name + "." + str(f)
                    for f in self._OutputColumns]
         else:
-            tmp = self._OutputColumns
+            tmp = [str(c) for c in self._OutputColumns]
         if asString:
             return ", ".join(tmp)
         else:
             return tmp
+            
+    def OutputColumnsDetails(self):
+        """Get the list(ColumnInfo) of output column details"""
+        return self._OutputColumns
 
     def AllColumns(self):
         """Get the list(string) of all columns of this table, including join columns.
@@ -72,30 +103,39 @@ class TableInfo:
         Join columns will be specified first in their original order then other columns
         in alphabetical order.
         """
+        return [str(c) for c in self._allColumns]
+    
+    def AllColumnsDetails(self):
+        """Get the list(ColumnInfo) of all columns of this table, including join columns."""
         return self._allColumns
 
     def GetCreateTableSQL(self):
-        """Get the SQL necessary to create this table in the DB. All columns are text."""
+        """Get the SQL necessary to create this table in the DB. All columns are type text.
+        
+        TODO - add data type to columninfo object and use it here to create columns of numeric etc 
+        type when possible"""
         fmt = "CREATE TABLE {0} ({1});"
         return fmt.format(self._Name,
-                          ", ".join([t + " text" for t in self._allColumns]))
+                          ", ".join([t + " text" for t in self.AllColumns()]))
 
     def GetInsertSQLTemplate(self):
         """Get the parameterized SQL to insert rows in the DB"""
         fmt = "INSERT INTO {0} ({1}) VALUES ({2})"
         return fmt.format(self._Name,
-                          ", ".join(self._allColumns),
-                          ",".join(["?" for i in self._allColumns]))
+                          ", ".join(self.AllColumns()),
+                          ",".join(["?" for i in self.AllColumns()]))
 
     def GetCreateIndexSQL(self):
-        """Get the SQL necessary to create indexes on all this table's join columns"""
+        """Get the SQL necessary to create indexes on all this table's join columns
+        
+        If more than 1 join column exists, also creates a covering index on all of them."""
         fmt = "CREATE INDEX {0} ON {1}({2});"
         idxName = "{0}_{1}"
         stmts = [fmt.format(idxName.format(jc, self._Name),
-                            self._Name, jc) for jc in self._JoinColumns]
-        if len(self._JoinColumns) > 0:
+                            self._Name, jc) for jc in self.JoinColumns()]
+        if len(self.JoinColumns()) > 0:
             allStmt = fmt.format(idxName.format("ALLIDX",self._Name),
-                                 self._Name, ",".join(self._JoinColumns))
+                                 self._Name, ",".join(self.JoinColumns()))
             stmts.append(allStmt)
         return "\n".join(stmts)
 
@@ -105,7 +145,7 @@ class TableToTableFieldCopier:
     It provides the necessary SQL, as a string, to transfer data in various different ways.
     Actually executing the SQL in a database is up to the caller.
 
-    Both tables must already exist in the DB and be provided as TableInfo objects.
+    Both tables must already exist in the DB and be represented as corresponding TableInfo objects.
     Only the fields specified in TransferFields (and which actually exist in
     InputTable) will be copied."""
     def __init__(self, OutputTable, InputTable, TransferFields):
@@ -124,7 +164,7 @@ class TableToTableFieldCopier:
         for use with DHS or other CSPro format data, e.g. to produce a M:1 join between
         a record for an individual (woman) and the parent record (household).
         """
-        fmtSubStr = "substr({0}.{1}, 1, length({0}.{1})-3)"
+        fmtSubStr = "substr({0}.{1}, 1, length({0}.{1})-{2})"
         fmt = "{0} = {1}"
         expr = "{0}.{1}"
         # The CASEID variable embeds 2 ids within it. With the last three
@@ -133,17 +173,29 @@ class TableToTableFieldCopier:
         # processing the raw DHS data!
         # So to join a table with CASEID to a table with HHID we need to modify
         # CASEID.
-        # We could also use a query like
+        # We will assume that any time we are joining two vars of differing lengths,
+        # this is the reason why and we should trim the longer to match the shorter.
+        # (We could also use a query like
         # SELECT * from REC21 LEFT JOIN RECH0 ON REC21.CASEID LIKE RECH0.HHID||'%'
-        # but that's very slow
+        # but that's very slow)
         outTable = self._OutputTable.Name()
         inTable = self._InputTable.Name()
-        if outCol == "CASEID" and inCol == "HHID" :
-            leftExpr = fmtSubStr.format(outTable, outCol)
+        if outCol.Length and inCol.Length and inCol.Length < outCol.Length:
+            lenDiff = outCol.Length - inCol.Length
+            leftExpr = fmtSubStr.format(outTable, outCol, str(lenDiff))
+        #if outCol == "CASEID" and inCol == "HHID" :
+        #    leftExpr = fmtSubStr.format(outTable, outCol)
         else:
             leftExpr = expr.format(outTable, outCol)
-        if outCol == "HHID" and inCol == "CASEID":
-            rightExpr = fmtSubStr.format(inTable, inCol)
+        #if outCol == "HHID" and inCol == "CASEID":
+        #    rightExpr = fmtSubStr.format(inTable, inCol)
+        if outCol.Length and inCol.Length and inCol.Length > outCol.Length:
+            lenDiff = inCol.Length - outCol.Length
+            rightExpr = fmtSubStr.format(inTable, inCol, str(lenDiff))
+            # This suggests we are joining HHID (left) to CASEID (right) which would be 1:M
+            strWarn = ("Right hand table ({0}) has a longer id column than ".format(inTable)+
+                "left hand table ({0}). Are you accidentally creating a 1:M join?".format(outTable))
+            warnings.warn(strWarn)
         else:
             rightExpr = expr.format(inTable, inCol)
         return fmt.format(leftExpr, rightExpr)
@@ -156,17 +208,22 @@ class TableToTableFieldCopier:
         The order of the join columns as provided at construction of the TableInfo
         objects is used to infer which column should be joined to which.
         """
-        myJoinCols = self._OutputTable.JoinColumns()
-        otherJoinCols = self._InputTable.JoinColumns()
+        myJoinCols = self._OutputTable.JoinColumnsDetails()
+        otherJoinCols = self._InputTable.JoinColumnsDetails()
         # If we are joining to a table with fewer join fields then only use
         # the common number of fields
         # For example the output table may specify CASEID and BIDX and can
         # join to a child table (1:1) on both of these, but can also join
         # to a parent table (M:1) on only CASEID
         # *** we assume the columns are in the matching order! ***
-        if len(myJoinCols) <= len(otherJoinCols):
+        if len(myJoinCols) < len(otherJoinCols):
+            warnings.warn(
+                "Right table {0} has more join columns than left table {1} - ".format(
+                self._InputTable.Name(), self._OutputTable.Name())+
+                "Are you accidentally creating a 1:M join?"
+                )
             otherJoinCols = otherJoinCols[0:len(myJoinCols)]
-        elif len(myJoinCols) >= len(otherJoinCols):
+        elif len(myJoinCols) > len(otherJoinCols):
             myJoinCols = myJoinCols[0:len(otherJoinCols)]
 
         joinSQL = " and ".join([self._GetJoinExpr(
@@ -327,7 +384,12 @@ class MultiTableJoiner():
     either 1:1 or M:1.
 
     Currently all defined output columns from all the input
-    tables will be used."""
+    tables will be used.
+    
+    TODO - add ability to extract coded value labels c.f. ESRI coded value domains.
+    See http://desktop.arcgis.com/en/arcmap/10.3/manage-data/using-sql-with-gdbs/example-resolving-domain-codes-to-description-values.htm
+    
+    """
     def __init__(self, OutputTableName, InputTablesList):
         self._OutputTableName = OutputTableName
         self._MasterTable = InputTablesList[0]
@@ -337,25 +399,28 @@ class MultiTableJoiner():
          for it in self._InputTableList
         ]
 
-    def _GetOuterJoinClause(self, leftTable, rightTable):
-        fmt = "LEFT JOIN {0} ON {1}"
-        return fmt.format(leftTable, self._GetInnerJoinClause(leftTable, rightTable))
+    #def _GetOuterJoinClause(self, leftTable, rightTable):
+    #    fmt = "LEFT JOIN {0} ON {1}"
+    #    return fmt.format(leftTable, self._GetInnerJoinClause(leftTable, rightTable))
 
     def GetCreateIntoSQL(self, QualifyFieldNames=False):
         """Get the SQL required to create the output table from the joined inputs.
 
         For example:
+        CREATE TABLE MyOutputTableName AS 
         SELECT REC21.CASEID, REC21.COLX, REC43.COLY, REC41.COLZ from REC21
            LEFT JOIN REC43 ON REC21.CASEID = REC43.CASEID and REC21.BIDX = REC43.HIDX
            LEFT JOIN REC41 ON REC21.CASEID = REC41.CASEID and REC21.BIDX = REC41.MIDX
            ....
+        This is the main function from this module which would normally be called by 
+        client code.
         """
         tblJoinTemplate = "LEFT JOIN {0} ON {1}"
-        selectTemplate = "SELECT {0} from {1} {2}"
+        selectTemplate = "SELECT \n{0} FROM \n {1} \n{2}"
         outputTemplate = "CREATE TABLE {0} AS {1}"
         # create the left-join clause for the select statement, to
         # include all the tables we are joining
-        tblJoins = " ".join([tblJoinTemplate.format(
+        tblJoins = " \n".join([tblJoinTemplate.format(
                         i._InputTable.Name(), i._GetJoinClause())
                     for i in self._TableCopiers])
         # build the list of columns to select out of the join - it's
