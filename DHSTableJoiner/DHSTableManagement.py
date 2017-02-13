@@ -384,7 +384,12 @@ class MultiTableJoiner():
     either 1:1 or M:1.
 
     Currently all defined output columns from all the input
-    tables will be used."""
+    tables will be used.
+    
+    TODO - add ability to extract coded value labels c.f. ESRI coded value domains.
+    See http://desktop.arcgis.com/en/arcmap/10.3/manage-data/using-sql-with-gdbs/example-resolving-domain-codes-to-description-values.htm
+    
+    """
     def __init__(self, OutputTableName, InputTablesList):
         self._OutputTableName = OutputTableName
         self._MasterTable = InputTablesList[0]
@@ -394,9 +399,9 @@ class MultiTableJoiner():
          for it in self._InputTableList
         ]
 
-    def _GetOuterJoinClause(self, leftTable, rightTable):
-        fmt = "LEFT JOIN {0} ON {1}"
-        return fmt.format(leftTable, self._GetInnerJoinClause(leftTable, rightTable))
+    #def _GetOuterJoinClause(self, leftTable, rightTable):
+    #    fmt = "LEFT JOIN {0} ON {1}"
+    #    return fmt.format(leftTable, self._GetInnerJoinClause(leftTable, rightTable))
 
     def GetCreateIntoSQL(self, QualifyFieldNames=False):
         """Get the SQL required to create the output table from the joined inputs.
@@ -411,11 +416,11 @@ class MultiTableJoiner():
         client code.
         """
         tblJoinTemplate = "LEFT JOIN {0} ON {1}"
-        selectTemplate = "SELECT {0} from {1} {2}"
+        selectTemplate = "SELECT \n{0} FROM \n {1} \n{2}"
         outputTemplate = "CREATE TABLE {0} AS {1}"
         # create the left-join clause for the select statement, to
         # include all the tables we are joining
-        tblJoins = " ".join([tblJoinTemplate.format(
+        tblJoins = " \n".join([tblJoinTemplate.format(
                         i._InputTable.Name(), i._GetJoinClause())
                     for i in self._TableCopiers])
         # build the list of columns to select out of the join - it's
